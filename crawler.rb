@@ -33,7 +33,17 @@ class Crawler
   def reserva
     page = @agent.get URL_RESERVA
     form = page.forms.first
-    puts form.inspect
+    form.field_with(:name => 'data').value = '20/12/2017'
+    form.field_with(:name => 'atividade').value = 'Ensaio dos eufônios'
+    form.field_with(:name => 'organizacao').value = 'Núcleo Sul'
+    form.field_with(:name => 'previsao').value = '20'
+    form.field_with(:name => 'sala').value = '67' #VETERANOS
+    form.field_with(:name => 'inicio').value = '19:00:00'
+    form.field_with(:name => 'fim').value = '20:00:00'
+    form.field_with(:name => 'divisao').value = '13' #GH - ENSAIO
+    button = form.buttons.first
+    page = form.submit button
+    puts page.inspect
   end
 end
 
