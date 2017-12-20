@@ -72,9 +72,18 @@ class Crawler
     form.field_with(:name => 'fim').value = fim
     form.field_with(:name => 'divisao').value = '13' #GH - ENSAIO
     button = form.buttons.first
-    #puts form.inspect
     page = form.submit button
-    #puts page.inspect
+  end
+
+  def extract_text (url)
+    output = File.new "saida", "w+"
+    page = @agent.get url
+    content = page.search("//div[@id='conteudo']")
+    content.search("//div[@id='intro']").remove
+    content.search("//div[@id='notas']").remove
+
+    output.puts content.text.gsub(/<("[^"]*"|'[^']*'|[^'">])*>/, '').gsub('  ', '').gsub("\n\n", "\n")
+    output.close
   end
 end
 
