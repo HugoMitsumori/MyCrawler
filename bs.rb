@@ -15,6 +15,9 @@ content.search('//a[@class="item color-grey"]').map { |link| links << link['href
 output = File.new "saida.html", "w+"
 output.puts "<!DOCTYPE html>\n<html>\n<body>\n<meta charset=\"utf-8\" />"
 
+content = page.search("//h2")
+output.puts content
+
 links.each do |link|
 	content = crawler.extract_html URL + link
 	output.puts content
