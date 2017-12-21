@@ -97,7 +97,13 @@ class Crawler
     content.search("//div[@id='intro']").remove
     content.search("//div[@id='notas']").remove    
     content.search("//div[@class='ui icon large teal message']").remove
-    return header << subtitle[0] << content[0]
+    if subtitle[0] != nil
+      header << subtitle[0]
+    end
+    if content[0] != nil
+      header << content[0]
+    end
+    return header
   end
 
   def agent
