@@ -96,6 +96,7 @@ class Crawler
     content = page.search("//div[@id='conteudo']")
     content.search("//div[@id='intro']").remove
     content.search("//div[@id='notas']").remove    
+    content.search("//div[@class='ui icon large teal message']").remove
     return header << subtitle[0] << content[0]
   end
 
