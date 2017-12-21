@@ -92,6 +92,7 @@ class Crawler
     header = page.search("//h1[@class='ui header']")
     subtitle = header.search("//div[@class='sub header']").remove
     subtitle.search("//img").remove
+    subtitle[0].inner_html = "<i>" + subtitle[0].inner_html + "</i>"
     content = page.search("//div[@id='conteudo']")
     content.search("//div[@id='intro']").remove
     content.search("//div[@id='notas']").remove    
