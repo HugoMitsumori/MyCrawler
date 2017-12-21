@@ -1,6 +1,7 @@
 require 'mechanize'
 require 'highline/import'
 
+URL = "https://extra2.bsgi.org.br"
 URL_LOGIN = "https://extra2.bsgi.org.br/login/"
 URL_RESERVA = "https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top"
 
@@ -84,6 +85,21 @@ class Crawler
 
     output.puts content.text.gsub(/<("[^"]*"|'[^']*'|[^'">])*>/, '').gsub('  ', '').gsub("\n\n", "\n")
     output.close
+  end
+
+  def extract_html (url)
+    page = @agent.get url
+    header = page.search("//h1[@class='ui header']")
+    subtitle = header.search("//div[@class='sub header']").remove
+    subtitle.search("//img").remove
+    content = page.search("//div[@id='conteudo']")
+    content.search("//div[@id='intro']").remove
+    content.search("//div[@id='notas']").remove    
+    return header << subtitle[0] << content[0]
+  end
+
+  def agent
+    return @agent
   end
 end
 
