@@ -36,18 +36,33 @@ class NRH
     @initial_page, @final_page = file.gets.split.map{|x| Integer(x)}
     @initial_edition, @final_edition = file.gets.split.map{|x| Integer(x)}
     while ( chapter = file.gets)
-      @chapters << chapter
+      @chapters << chapter.gsub("\n","")
     end
   end
 
   def process_edition (edition)
     edition_title = edition.content.gsub("  ", "").gsub(/[\n]+/, "\n").lines[1]
-      edition_number = Integer(edition_title.split[1])
-      if edition_number.between?(@initial_edition, @final_edition)
-        link = edition.children[3].children[1].attribute_nodes[1].value
-        part_name = edition.children[3].children[1].attribute_nodes[3].value
-        puts part_name
-      end
+    edition_number = Integer(edition_title.split[1])
+    if edition_number.between?(@initial_edition, @final_edition)
+      edition.children[3].children.each do |part|
+        if part.class == Nokogiri::XML::Text 
+          #eliminates empty nodes
+          next 
+        end
+
+        link = part.attribute_nodes[1].value
+        part_name = part.attribute_nodes[3].value
+
+        @chapters.each do |chapter|
+          if part_name.include? chapter
+            process_chapter
+          end
+        end        
+      end                  
+    end
+  end
+
+  def process_chapter
   end
 end
 
