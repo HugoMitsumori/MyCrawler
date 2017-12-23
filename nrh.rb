@@ -1,4 +1,5 @@
 load 'crawler.rb'
+require 'unicode'
 
 URL_NRH = "https://extra2.bsgi.org.br/impressos/online/serie/nova-revolucao-humana/"
 
@@ -11,22 +12,28 @@ class NRH
     @initial_edition
     @final_edition
     @chapters = []
+    @current_chapter = ""
+    @file = File.new(file_name + ".html", "w+")
     read_parameters file_name
   end
 
   def generate_html
+    @file.puts "<!DOCTYPE html>\n<html>\n<body>\n<meta charset=\"utf-8\" />"
+    @file.puts "<i>Brasil Seikyo, Edições #{@initial_edition} a #{@final_edition}</i>\n"
 
-    # for i in Integer(final_page).downto Integer(initial_page)
-    #   page = crawler.agent.get URL_NRH + i.to_s
-    #   puts page.inspect
-    # end
-    page = @crawler.agent.get URL_NRH + @final_page.to_s
-    page = page.search("//div[@class='content']").remove
-    page.delete page.first
-
-    page.reverse_each do |edition|
-      process_edition edition
+    for i in @final_page.downto @initial_page
+      puts "= Processando #{URL_NRH + i.to_s}"
+      page = @crawler.agent.get URL_NRH + i.to_s
+      page = page.search("//div[@class='content']").remove
+      page.delete page.first
+    
+      page.reverse_each do |edition|
+        process_edition edition
+      end
     end
+    
+    @file.puts "</body>\n</html>"
+    @file.close
   end
 
   private
@@ -36,7 +43,7 @@ class NRH
     @initial_page, @final_page = file.gets.split.map{|x| Integer(x)}
     @initial_edition, @final_edition = file.gets.split.map{|x| Integer(x)}
     while ( chapter = file.gets)
-      @chapters << chapter.gsub("\n","")
+      @chapters << Unicode.upcase(chapter.gsub("\n",""))
     end
   end
 
@@ -51,18 +58,21 @@ class NRH
         end
 
         link = part.attribute_nodes[1].value
-        part_name = part.attribute_nodes[3].value
+        part_name = Unicode.upcase(part.attribute_nodes[3].value)
 
         @chapters.each do |chapter|
           if part_name.include? chapter
-            process_chapter
+            if @current_chapter != chapter 
+              @current_chapter = chapter
+              @file.puts "<h1>#{@current_chapter}</h1>\n"
+              puts "=====Novo capítulo: #{@current_chapter}====="
+            end
+            puts "processando #{part_name} de #{(URL + link)}"
+            @file.puts @crawler.extract_text (URL + link)            
           end
         end        
       end                  
     end
-  end
-
-  def process_chapter
   end
 end
 

@@ -77,32 +77,28 @@ class Crawler
   end
 
   def extract_text (url)
-    output = File.new "saida", "w+"
     page = @agent.get url
     content = page.search("//div[@id='conteudo']")
     content.search("//div[@id='intro']").remove
-    content.search("//div[@id='notas']").remove
-
-    output.puts content.text.gsub(/<("[^"]*"|'[^']*'|[^'">])*>/, '').gsub('  ', '').gsub("\n\n", "\n")
-    output.close
+    content.search("//div[@id='notas']").remove    
+    content.search("//div[@class='ui icon large teal message']").remove
+    return content[0]
   end
 
-  def extract_html (url)
+  def extract_article (url)
     page = @agent.get url
     header = page.search("//h1[@class='ui header']")
     subtitle = header.search("//div[@class='sub header']").remove
     subtitle.search("//img").remove
     subtitle[0].inner_html = "<i>" + subtitle[0].inner_html + "</i>"
-    content = page.search("//div[@id='conteudo']")
-    content.search("//div[@id='intro']").remove
-    content.search("//div[@id='notas']").remove    
-    content.search("//div[@class='ui icon large teal message']").remove
+    content = extract_text url
+    if content == nil 
+      return ""
+    end
     if subtitle[0] != nil
       header << subtitle[0]
     end
-    if content[0] != nil
-      header << content[0]
-    end
+    header << content
     return header
   end
 

@@ -19,7 +19,7 @@ content = page.search("//h2")
 output.puts content
 
 links.each do |link|
-	content = crawler.extract_html URL + link
+	content = crawler.extract_article URL + link
 	output.puts content
 end
 output.puts "</body>\n</html>"
