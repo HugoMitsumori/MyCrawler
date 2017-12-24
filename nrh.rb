@@ -2,6 +2,22 @@ load 'crawler.rb'
 require 'unicode'
 
 URL_NRH = "https://extra2.bsgi.org.br/impressos/online/serie/nova-revolucao-humana/"
+SUBSTITUTIONS = {
+  "Nitiren" => "Nichiren",
+  "utra de Lótus" => "utra do Lótus",
+  "rengue" => "renge",
+  "chakubuku" => "Shakubuku",
+  "Chakubuku" => "Shakubuku",
+  "odhisattva" => "odisatva",
+  "ossen-rufu" => "osen-rufu",
+  "akyamuni" => "hakyamuni",
+  "Jossei" => "Josei",
+  "Tsunessaburo" => "Tsunesaburo",
+  "Makiguti" => "Makiguchi",
+  "Shin-iti" => "Shin'ichi"
+}
+
+
 
 class NRH
   def initialize (codigo, senha, file_name)
@@ -83,11 +99,19 @@ class NRH
               @current_part = 1
             end
             puts "processando #{part_name} de #{(URL + link)}"
-            @content[chapter][part_number] = @crawler.extract_text (URL + link) 
+            content = substitute_words(@crawler.extract_text(URL + link).to_s)
+            @content[chapter][part_number] = content
           end
         end        
       end                  
     end
+  end
+
+  def substitute_words (content)
+    SUBSTITUTIONS.each do |old_writting, new_writting|
+      content = content.gsub(old_writting, new_writting)
+    end
+    return content
   end
 end
 
