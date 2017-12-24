@@ -11,9 +11,11 @@ class NRH
     @final_page
     @initial_edition
     @final_edition
+    @current_part = 0
     @chapters = []
     @current_chapter = ""
     @file = File.new(file_name + ".html", "w+")
+    @content = {}
     read_parameters file_name
   end
 
@@ -31,7 +33,17 @@ class NRH
         process_edition edition
       end
     end
-    
+    @content.each do |key, chapter|
+      @file.puts "<h1>#{key}</h1>\n"
+      chapter.each_with_index do |part, index|
+        if part != nil
+          puts "#{key} #{index}"
+          @file.puts part
+        end
+      end
+    end
+
+
     @file.puts "</body>\n</html>"
     @file.close
   end
@@ -43,7 +55,9 @@ class NRH
     @initial_page, @final_page = file.gets.split.map{|x| Integer(x)}
     @initial_edition, @final_edition = file.gets.split.map{|x| Integer(x)}
     while ( chapter = file.gets)
-      @chapters << Unicode.upcase(chapter.gsub("\n",""))
+      chapter = Unicode.upcase(chapter.gsub("\n",""))
+      @chapters << chapter
+      @content[chapter] = []
     end
   end
 
@@ -59,16 +73,17 @@ class NRH
 
         link = part.attribute_nodes[1].value
         part_name = Unicode.upcase(part.attribute_nodes[3].value)
+        part_number = Integer part_name.scan(/[\(][0-9]+[\)]/)[0].gsub("(", "").gsub(")", "")
 
         @chapters.each do |chapter|
           if part_name.include? chapter
             if @current_chapter != chapter 
-              @current_chapter = chapter
-              @file.puts "<h1>#{@current_chapter}</h1>\n"
+              @current_chapter = chapter              
               puts "=====Novo capítulo: #{@current_chapter}====="
+              @current_part = 1
             end
             puts "processando #{part_name} de #{(URL + link)}"
-            @file.puts @crawler.extract_text (URL + link)            
+            @content[chapter][part_number] = @crawler.extract_text (URL + link) 
           end
         end        
       end                  
