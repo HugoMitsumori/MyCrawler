@@ -44,7 +44,7 @@ else
   parameters = File.new(ARGV[0], "r")
   codigo, senha = parameters.gets.split
   if crawler.login codigo, senha
-  	sleep 10
+  	sleep 8
   	sede = parameters.gets.gsub("\n", "")
     atividade = parameters.gets.gsub("\n", "")
     data = parameters.gets.gsub("\n", "")
@@ -52,7 +52,7 @@ else
     salas = parameters.gets.split
     salas.each do |sala|
       crawler.reservar sede, atividade, sala, data, inicio, fim
-      sleep 5
+      sleep 2
     end
   end
   parameters.close

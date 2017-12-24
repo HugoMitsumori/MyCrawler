@@ -92,7 +92,7 @@ class Crawler
     form.field_with(:name => 'sala').value = sala
     form.field_with(:name => 'inicio').value = inicio
     form.field_with(:name => 'fim').value = fim
-    form.field_with(:name => 'divisao').value = '13' #GH - ENSAIO
+    form.field_with(:name => 'divisao').value = '13' #13 = GH - ENSAIO
     button = form.buttons.first
     page = form.submit button
   end
