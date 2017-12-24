@@ -10,28 +10,44 @@ end
 
 crawler = Crawler.new
 
-loop do
-  codigo = get_data "Digite seu codigo (sem o último digito): "
-  senha = get_password "Digite sua senha: "
-  break if crawler.login codigo, senha
-  puts "Erro de autenticação!!"
-end
+if ARGV[0] == nil 
 
-atividade = get_data "Digite o nome padrão para a atividade: "
+  loop do
+    codigo = get_data "Digite seu codigo (sem o último digito): "
+    senha = get_password "Digite sua senha: "
+    break if crawler.login codigo, senha
+    puts "Erro de autenticação!!"
+  end
 
-data = get_data "Digite a data no formato dd/mm/aa: "
+  atividade = get_data "Digite o nome padrão para a atividade: "
 
-hora = get_data "Digite o horário de inicio e fim (no formato 00:00:00 00:00:00) : "
-inicio = hora.split[0]
-fim = hora.split[1]
+  data = get_data "Digite a data no formato dd/mm/aa: "
 
-SALAS.each do |k, v|
-  puts "#{k} - #{v}"
-end
-salas = get_data "Digite os codigos das salas separados por espaco: "
-salas = salas.split
+  hora = get_data "Digite o horário de inicio e fim (no formato 00:00:00 00:00:00) : "
+  inicio, fim  = hora.split
 
-salas.each do |sala|
-  crawler.reservar atividade, sala, data, inicio, fim
-  sleep 2
+  SALAS.each do |k, v|
+    puts "#{k} - #{v}"
+  end
+  salas = get_data "Digite os codigos das salas separados por espaco: "
+  salas = salas.split
+
+  salas.each do |sala|
+    crawler.reservar atividade, sala, data, inicio, fim
+    sleep 2
+  end
+else
+  parameters = File.new(ARGV[0], "r")
+  codigo, senha = parameters.gets.split
+  if crawler.login codigo, senha
+    atividade = parameters.gets
+    data = parameters.gets
+    inicio, fim = parameters.gets.split
+    salas = parameters.gets.split
+    salas.each do |sala|
+      crawler.reservar atividade, sala, data, inicio, fim
+      sleep 2
+    end
+  end
+  parameters.close
 end

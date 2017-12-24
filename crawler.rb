@@ -34,6 +34,8 @@ CAPACIDADE = {
 }
 
 class Crawler
+  attr_reader :agent
+
   def initialize
     @agent = Mechanize.new
     @agent.follow_meta_refresh = true
@@ -74,6 +76,7 @@ class Crawler
     form.field_with(:name => 'divisao').value = '13' #GH - ENSAIO
     button = form.buttons.first
     page = form.submit button
+    puts page.inspect
   end
 
   def extract_text (url)
@@ -102,8 +105,14 @@ class Crawler
     return header
   end
 
-  def agent
-    return @agent
+  def schedule_reserve(date)
+    script = File.new("#{date}.bat", "+w")
+    dir = Dir.pwd
+    script.puts "cd #{dir}"
+    script.puts "ruby reservas.rb #{date}.scrt"
+
+    script.close
+    system "SchTasks /Create /SC ONCE /SD 24/12/2017 /ST 13:44 /TN \"#{date}Schedule\" /TR \"#{dir}\\#{date}.bat\""
   end
 end
 

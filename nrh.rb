@@ -116,6 +116,7 @@ class NRH
 end
 
 nrh = NRH.new ARGV[0], ARGV[1], ARGV[2]
+
 nrh.generate_html
 
 
