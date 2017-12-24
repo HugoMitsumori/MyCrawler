@@ -76,7 +76,6 @@ class Crawler
     form.field_with(:name => 'divisao').value = '13' #GH - ENSAIO
     button = form.buttons.first
     page = form.submit button
-    puts page.inspect
   end
 
   def extract_text (url)
