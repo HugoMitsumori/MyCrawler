@@ -19,21 +19,25 @@ if ARGV[0] == nil
     puts "Erro de autenticação!!"
   end
 
+  sede = get_data "CCSUL ou INTERLAGOS? :"
+
   atividade = get_data "Digite o nome padrão para a atividade: "
 
-  data = get_data "Digite a data no formato dd/mm/aa: "
+  data = get_data "Digite a data no formato dd/mm/aaaa: "
 
   hora = get_data "Digite o horário de inicio e fim (no formato 00:00:00 00:00:00) : "
   inicio, fim  = hora.split
 
-  SALAS.each do |k, v|
+  salas = sede == "CCSUL" ? SALAS_CCSUL : SALAS_INTERLAGOS
+
+  salas.each do |k, v|
     puts "#{k} - #{v}"
   end
   salas = get_data "Digite os codigos das salas separados por espaco: "
   salas = salas.split
 
   salas.each do |sala|
-    crawler.reservar atividade, sala, data, inicio, fim
+    crawler.reservar sede, atividade, sala, data, inicio, fim
     sleep 2
   end
 else
@@ -41,12 +45,13 @@ else
   codigo, senha = parameters.gets.split
   if crawler.login codigo, senha
   	sleep 10
+  	sede = parameters.gets.gsub("\n", "")
     atividade = parameters.gets.gsub("\n", "")
     data = parameters.gets.gsub("\n", "")
     inicio, fim = parameters.gets.split
     salas = parameters.gets.split
     salas.each do |sala|
-      crawler.reservar atividade, sala, data, inicio, fim
+      crawler.reservar sede, atividade, sala, data, inicio, fim
       sleep 5
     end
   end

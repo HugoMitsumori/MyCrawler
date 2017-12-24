@@ -3,9 +3,10 @@ require 'highline/import'
 
 URL = "https://extra2.bsgi.org.br"
 URL_LOGIN = "https://extra2.bsgi.org.br/login/"
-URL_RESERVA = "https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top"
+URL_CCSUL = "https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top"
+URL_INTERLAGOS = "https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top"
 
-SALAS = {
+SALAS_CCSUL = {
   'BIBLIOTECA' => '334',
   'REDE DA AMIZADE' => '66',
   'VETERANOS' => '67',
@@ -19,7 +20,15 @@ SALAS = {
   'PILAR' => '76',
 }
 
-CAPACIDADE = {
+SALAS_INTERLAGOS = {
+  'BUTSUMAN I' => '90',
+  'BUTSUMAN II' => '88',
+  'BUTSUMAN III' => '89',
+  'BUTSUMAN IV' => '91',
+  'SALA DE CONFERENCIA' => '92'
+}
+
+CAPACIDADE_CCSUL = {
   '334' => '20',
   '66' => '100',
   '67' => '60',
@@ -31,6 +40,14 @@ CAPACIDADE = {
   '73' => '30',
   '75' => '10',
   '76' => '10',
+}
+
+CAPACIDADE_INTERLAGOS = {
+  '90' => '150',
+  '88' => '250',
+  '89' => '50',
+  '91' => '25',
+  '92' => '20'
 }
 
 class Crawler
@@ -63,13 +80,15 @@ class Crawler
     end
   end
 
-  def reservar (atividade, sala, data, inicio, fim)
-    page = @agent.get URL_RESERVA
+  def reservar (sede, atividade, sala, data, inicio, fim)
+    url_reserva = sede == "CCSUL" ? URL_CCSUL : URL_INTERLAGOS
+    capacidade = sede == "CCSUL" ? CAPACIDADE_CCSUL : CAPACIDADE_INTERLAGOS
+    page = @agent.get url_reserva
     form = page.forms.first
     form.field_with(:name => 'data').value = data
     form.field_with(:name => 'atividade').value = atividade
     form.field_with(:name => 'organizacao').value = 'Núcleo Sul'
-    form.field_with(:name => 'previsao').value = (Integer(CAPACIDADE[sala]) > 50 ? 50.to_s : CAPACIDADE[sala])
+    form.field_with(:name => 'previsao').value = (Integer(capacidade[sala]) > 50 ? 50.to_s : capacidade[sala])
     form.field_with(:name => 'sala').value = sala
     form.field_with(:name => 'inicio').value = inicio
     form.field_with(:name => 'fim').value = fim
