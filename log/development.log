@@ -149,3 +149,573 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 10ms (Views: 9.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:22:28 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 65.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:23:32 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  board": expected "{", was "}"):
+    4:     <title>MyCrawler</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/common.scss:10
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2845893723923026390_70047394534620'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:23:33 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 13ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  board": expected "{", was "}"):
+    4:     <title>MyCrawler</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/common.scss:10
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2845893723923026390_70047234117740'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:23:34 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 23ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  board": expected "{", was "}"):
+    4:     <title>MyCrawler</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/common.scss:10
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2845893723923026390_70047393877380'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:23:41 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  board": expected "{", was "}"):
+    4:     <title>MyCrawler</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/common.scss:10
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2845893723923026390_47123132257300'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:05 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:10 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:16 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:20 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:25 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:27 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 57ms (Views: 56.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:34 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:44 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:24:48 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:25:07 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:25:21 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:25:40 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 1733ms (Views: 1732.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:25:51 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:26:56 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:27:13 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:27:29 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:27:37 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:27:39 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms)
+
+
+Completed 200 OK in 877ms (Views: 876.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:27:42 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 74ms (Views: 73.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:28:38 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:28:58 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 2249ms (Views: 2248.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:29:18 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 149ms (Views: 149.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:31:44 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 344ms (Views: 343.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:32:30 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:32:48 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:32:52 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:32:57 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 82ms (Views: 82.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:33:25 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 24.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:33:39 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:34:42 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 36.1ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:52:39 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
+    2: 
+    3: .form-container
+    4:   = form_for :user do
+    5:     = label 'Código'
+    6:     = text_field :code
+    7: 
+    8:     = label 'Senha'
+  
+app/views/sessions/new.html.haml:5:in `block in _app_views_sessions_new_html_haml__2334578958888593767_70047394096060'
+app/views/sessions/new.html.haml:4:in `_app_views_sessions_new_html_haml__2334578958888593767_70047394096060'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:52:58 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (78.4ms)
+Completed 500 Internal Server Error in 80ms
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    3: .form-container
+    4:   = form_for :user do
+    5:     = label :user, 'Código'
+    6:     = text_field :code
+    7: 
+    8:     = label 'Senha'
+    9:     = password_field :password
+  
+app/views/sessions/new.html.haml:6:in `block in _app_views_sessions_new_html_haml__2334578958888593767_70047238769540'
+app/views/sessions/new.html.haml:4:in `_app_views_sessions_new_html_haml__2334578958888593767_70047238769540'
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:53:17 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 28ms (Views: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:53:34 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:53:50 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:54:03 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:54:22 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:55:10 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:55:50 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:57:27 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:57:48 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:57:54 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:58:11 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:58:39 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 17.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:58:50 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 15.6ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-01-25 13:58:52 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:58:54 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:59:17 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 28.5ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-01-25 13:59:21 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:59:23 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 13:59:43 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 11.6ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-01-25 13:59:46 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-25 14:03:00 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 14:03:11 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms)
+
+

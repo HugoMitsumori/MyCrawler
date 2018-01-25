@@ -35,6 +35,10 @@ build-iPhoneSimulator/
 /doc/
 /rdoc/
 
+/log/*
+!/log/.keep
+/tmp
+
 ## Environment normalization:
 /.bundle/
 /vendor/bundle

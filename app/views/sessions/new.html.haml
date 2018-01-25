@@ -1,4 +1,11 @@
 %h1 Entrar
 
 .form-container
-  Olá mundo!!
+  = form_for :user, remote: true do
+    = label :user, 'Código:'
+    = text_field :user, :code
+
+    = label :user, 'Senha:'
+    = password_field :user, :password
+
+    = submit_tag 'Entrar'
