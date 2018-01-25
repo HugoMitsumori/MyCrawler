@@ -5619,3 +5619,59 @@ Processing by ReservesController#new as HTML
 Completed 200 OK in 15ms (Views: 13.4ms)
 
 
+Started GET "/reservar" for 127.0.0.1 at 2018-01-25 18:10:38 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms)
+
+
+Started GET "/reservar" for 127.0.0.1 at 2018-01-25 18:12:19 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms)
+
+
+Started GET "/reservar" for 127.0.0.1 at 2018-01-25 18:12:24 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 18:12:27 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 18:12:38 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 18.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-01-25 18:12:45 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservar
+Completed 200 OK in 4962ms
+
+
+Started GET "/reservar" for 127.0.0.1 at 2018-01-25 18:12:50 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 12.8ms)
+
+
+Started GET "/reservar" for 127.0.0.1 at 2018-01-25 18:13:16 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 21.6ms)
+
+

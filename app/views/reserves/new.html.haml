@@ -1,4 +1,17 @@
 %h1 Reserva de Salas
 
 .form-container
-  Formulário
+  = form_for :reserve, remote: true do |f|
+    = f.label 'Nome padrão da atividade:'
+    = f.text_field :name
+
+    = f.label 'Data (dd/mm/aaaa):'
+    = f.text_field :date
+
+    = f.label 'Horário de início e fim(00:00:00 00:00:00):'
+    = f.text_field :time
+
+    = f.label 'Salas:'
+    = f.text_field :rooms
+
+    = f.submit 'Reservar'
