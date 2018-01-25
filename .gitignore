@@ -35,6 +35,7 @@ build-iPhoneSimulator/
 /doc/
 /rdoc/
 
+log/*
 /log/*
 !/log/.keep
 /tmp
