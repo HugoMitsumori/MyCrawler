@@ -7039,3 +7039,135 @@ No template found for ReservesController#create, rendering head :no_content
 Completed 204 No Content in 23798ms
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-25 23:13:28 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-01-25 23:13:31 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/create.js.haml
+  Rendered sessions/create.js.haml (4.2ms)
+Completed 200 OK in 142ms (Views: 15.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-01-25 23:13:36 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 2881ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-01-25 23:13:38 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 15.3ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:13:57 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+No template found for ReservesController#create, rendering head :no_content
+Completed 204 No Content in 5882ms
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:16:33 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/reserves_controller.rb:11:in `+'
+app/controllers/reserves_controller.rb:11:in `create'
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:16:42 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/reserves_controller.rb:11:in `+'
+app/controllers/reserves_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-01-25 23:23:37 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 12.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-01-25 23:23:44 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 5551ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-01-25 23:23:49 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:24:07 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+No template found for ReservesController#create, rendering head :no_content
+Completed 204 No Content in 5964ms
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:25:03 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/reserves_controller.rb:11:in `+'
+app/controllers/reserves_controller.rb:11:in `create'
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:25:16 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"73", "members"=>"20"}, "commit"=>"Reservar"}
+No template found for ReservesController#create, rendering head :no_content
+Completed 204 No Content in 12129ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 23:28:24 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-01-25 23:28:29 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 5678ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-01-25 23:28:34 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-01-25 23:29:00 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio para Convenção", "date"=>"18/03/2018", "start_time"=>"08:30:00", "finish_time"=>"12:00:00", "rooms"=>"72 67", "members"=>"20"}, "commit"=>"Reservar"}
+No template found for ReservesController#create, rendering head :no_content
+Completed 204 No Content in 18048ms
+
+
