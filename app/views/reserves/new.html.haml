@@ -1,17 +1,30 @@
 %h1 Reserva de Salas
 
 .form-container
-  = form_for :reserve, remote: true do |f|
+  = form_for :reserve, url: '/reserves', remote: true do |f|
     = f.label 'Nome padrão da atividade:'
     = f.text_field :name
 
     = f.label 'Data (dd/mm/aaaa):'
     = f.text_field :date
 
-    = f.label 'Horário de início e fim(00:00:00 00:00:00):'
-    = f.text_field :time
+    = f.label 'Horário de início (00:00:00):'
+    = f.text_field :start_time
 
-    = f.label 'Salas:'
+    = f.label 'Horário de término (00:00:00):'
+    = f.text_field :finish_time
+
+    = f.label 'Salas (códigos, separados por espaço):'
     = f.text_field :rooms
 
+    = f.label 'Número previsto de membros:'
+    = f.text_field :members
+
     = f.submit 'Reservar'
+
+    = link_to 'Voltar', '/'
+
+  .rooms-container
+    %h3 Código das Salas:
+    - @rooms.each do |room, number|
+      %h5 #{number} - #{room}

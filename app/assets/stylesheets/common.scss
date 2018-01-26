@@ -11,17 +11,18 @@ body{
 }
 
 .form-container{
-  height: 400px;
-  width: 600px;
+  height: 500px;
+  width: 800px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px #dddddd;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
   form{
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -53,4 +54,15 @@ input[type=submit]{
   color: white;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.rooms-container{
+  padding: 5px;
+  box-shadow: 0 0 5px #cccccc;
+  border-radius: 5px;
+  margin: 10px;
+
+  h5{
+    margin: 5px;
+  }
 }

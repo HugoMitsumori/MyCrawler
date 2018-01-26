@@ -4,7 +4,7 @@ module CrawlerHelper
   URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'
   URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'
 
-  SALAS_CCSUL = {
+  CCSUL_ROOMS = {
     'BIBLIOTECA' => '334',
     'REDE DA AMIZADE' => '66',
     'VETERANOS' => '67',
@@ -69,7 +69,7 @@ module CrawlerHelper
     end
   end
 
-  def reservar (sede, atividade, sala, data, inicio, fim)
+  def reservar (sede, atividade, sala, data, inicio, fim, previsao)
     url_reserva = sede == 'CCSUL' ? URL_CCSUL : URL_INTERLAGOS
     capacidade = sede == 'CCSUL' ? CAPACIDADE_CCSUL : CAPACIDADE_INTERLAGOS
     page = @agent.get url_reserva
