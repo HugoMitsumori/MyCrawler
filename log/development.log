@@ -20016,3 +20016,34 @@ Completed 500 Internal Server Error in 109ms
 Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
   
 app/controllers/sessions_controller.rb:5:in `new'
+Started GET "/" for 127.0.0.1 at 2018-02-11 21:50:20 -0200
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 91ms
+
+
+  
+RuntimeError (Cannot load `Rails.application.database_configuration`:
+Could not load database configuration. No such file - ["config/database.yml"]):
+  
+app/controllers/sessions_controller.rb:5:in `new'
+Started GET "/" for 127.0.0.1 at 2018-02-11 21:53:15 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 122ms (Views: 121.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-11 21:53:17 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 4049ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-02-11 21:53:21 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 14.1ms)
+
+

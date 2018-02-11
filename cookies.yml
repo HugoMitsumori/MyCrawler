@@ -3,19 +3,19 @@ extra2.bsgi.org.br:
   "/":
     csrftoken: !ruby/object:Mechanize::Cookie
       name: csrftoken
-      value: 67dc3e9016975573bc4d4cc26ffae071
+      value: cdd76133ac8678da5509bcfacde9675b
       domain: extra2.bsgi.org.br
       for_domain: false
       path: "/"
       secure: false
       httponly: false
-      expires: Sun, 10 Feb 2019 23:42:00 GMT
+      expires: Sun, 10 Feb 2019 23:53:17 GMT
       max_age: 
-      created_at: 2018-02-11 21:42:00.875978109 -02:00
-      accessed_at: &1 2018-02-11 21:42:03.047404695 -02:00
+      created_at: 2018-02-11 21:53:17.952710349 -02:00
+      accessed_at: &1 2018-02-11 21:53:20.097950586 -02:00
     sessionid: !ruby/object:Mechanize::Cookie
       name: sessionid
-      value: a4df0af96a15da6a7bae306948d03f75
+      value: cfb82f5bfd130f27478ac9f0b1c7525f
       domain: extra2.bsgi.org.br
       for_domain: false
       path: "/"
@@ -23,7 +23,7 @@ extra2.bsgi.org.br:
       httponly: false
       expires: 
       max_age: 
-      created_at: 2018-02-11 21:42:03.044587385 -02:00
+      created_at: 2018-02-11 21:53:20.096296712 -02:00
       accessed_at: *1
 bsgi.org.br:
   "/":
@@ -37,11 +37,11 @@ bsgi.org.br:
       httponly: false
       expires: 
       max_age: 
-      created_at: 2018-02-11 21:42:03.044822507 -02:00
+      created_at: 2018-02-11 21:53:20.096510330 -02:00
       accessed_at: *1
     bsgiextra2: !ruby/object:Mechanize::Cookie
       name: bsgiextra2
-      value: 3631f5bed12fd2d6c4268e20b60369
+      value: ffa67e1081ac0cf43704e0e0858ca4
       domain: bsgi.org.br
       for_domain: true
       path: "/"
@@ -49,5 +49,5 @@ bsgi.org.br:
       httponly: false
       expires: 
       max_age: 
-      created_at: 2018-02-11 21:42:03.046151679 -02:00
+      created_at: 2018-02-11 21:53:20.096721293 -02:00
       accessed_at: *1
