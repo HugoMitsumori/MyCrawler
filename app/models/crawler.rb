@@ -43,13 +43,13 @@ class Crawler
     button = form.buttons.first
     page = form.submit button
     return false if page.title == '.:: BSGI Extranet ::.'
-    @agent.cookie_jar.save('cookies.yaml', session: true)
+    @agent.cookie_jar.save('cookies.yml', session: true)
     @agent
   end
 
-  def reserve(sede, atividade, sala, data, inicio, fim, previsao)
-    if File.exist?('cookies.yaml')
-      get_agent.cookie_jar.load('cookies.yaml')
+  def reserve(sede, atividade, sala, data, inicio, fim, previsao, organizacao, divisao)
+    if File.exist?('cookies.yml')
+      get_agent.cookie_jar.load('cookies.yml')
     elsif @agent.nil?
       unless login @code, @password
         puts "ERRO PARA LOGAR com #{@code} e #{@password}"
@@ -62,12 +62,12 @@ class Crawler
     form = page.forms.first
     form.field_with(name: 'data').value = data
     form.field_with(name: 'atividade').value = atividade
-    form.field_with(name: 'organizacao').value = 'Núcleo Sul'
+    form.field_with(name: 'organizacao').value = organizacao
     form.field_with(name: 'previsao').value = (Integer(capacidade[sala]) > Integer(previsao) ? previsao : capacidade[sala])
     form.field_with(name: 'sala').value = sala
-    form.field_with(name: 'inicio').value = inicio
-    form.field_with(name: 'fim').value = fim
-    form.field_with(name: 'divisao').value = '13' # 13 = GH - ENSAIO, 1 = 5D
+    form.field_with(name: 'inicio').value = inicio + ':00'
+    form.field_with(name: 'fim').value = fim + ':00'
+    form.field_with(name: 'divisao').value = divisao # 13 = GH - ENSAIO, 1 = 5D
     button = form.buttons.first
     puts 'APERTANDO BOTÃO' + button.inspect
     form.submit button
@@ -75,6 +75,7 @@ class Crawler
 
   def get_agent
     @agent = new_agent if @agent.nil?
+    @agent
   end
 
   private

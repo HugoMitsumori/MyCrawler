@@ -90,22 +90,23 @@ class NRH
         part_number = Integer part_name.scan(/[\(][0-9]+[\)]/)[0].delete('()')
 
         @chapters.each do |chapter|
-          if part_name.include?(chapter)
-            if @current_chapter != chapter
-              @current_chapter = chapter
-              puts "=====Novo capítulo: #{@current_chapter}====="
-              @current_part = 1
-            end
-            puts "processando #{part_name} de #{(URL + link)}"
-            content = substitute_words(@crawler.extract_text(URL + link).to_s)
-            @content[chapter][part_number] = content
+          unless part_name.include?(chapter)
+            next
           end
+          if @current_chapter != chapter
+            @current_chapter = chapter
+            puts "=====Novo capítulo: #{@current_chapter}====="
+            @current_part = 1
+          end
+          puts "processando #{part_name} de #{(URL + link)}"
+          content = substitute_words(@crawler.extract_text(URL + link).to_s)
+          @content[chapter][part_number] = content
         end
       end
     end
   end
 
-  def substitute_words (content)
+  def substitute_words(content)
     SUBSTITUTIONS.each do |old_writting, new_writting|
       content = content.gsub(old_writting, new_writting)
     end

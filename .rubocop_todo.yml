@@ -163,6 +163,9 @@ Performance/StringReplacement:
     - 'modules/nrh.rb'
     - 'modules/reservas.rb'
 
+Style/AndOr:
+  Enabled: false
+
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, EnforcedStyle.

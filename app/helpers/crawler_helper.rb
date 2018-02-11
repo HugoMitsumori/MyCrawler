@@ -1,8 +1,8 @@
 module CrawlerHelper
-  URL = 'https://extra2.bsgi.org.br'
-  URL_LOGIN =  'https://extra2.bsgi.org.br/login/'
-  URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'
-  URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'
+  URL = 'https://extra2.bsgi.org.br'.freeze
+  URL_LOGIN =  'https://extra2.bsgi.org.br/login/'.freeze
+  URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'.freeze
+  URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'.freeze
 
   CCSUL_ROOMS = {
     'BIBLIOTECA' => '334',
@@ -16,7 +16,7 @@ module CrawlerHelper
     'SOL DA ESPERANÇA' => '73',
     'VISITAS' => '75',
     'PILAR' => '76',
-  }
+  }.freeze
 
   SALAS_INTERLAGOS = {
     'BUTSUMAN I' => '90',
@@ -24,7 +24,7 @@ module CrawlerHelper
     'BUTSUMAN III' => '89',
     'BUTSUMAN IV' => '91',
     'SALA DE CONFERENCIA' => '92'
-  }
+  }.freeze
 
   CAPACIDADE_CCSUL = {
     '334' => '20',
@@ -38,7 +38,7 @@ module CrawlerHelper
     '73' => '30',
     '75' => '10',
     '76' => '10',
-  }
+  }.freeze
 
   CAPACIDADE_INTERLAGOS = {
     '90' => '150',
@@ -46,11 +46,11 @@ module CrawlerHelper
     '89' => '50',
     '91' => '25',
     '92' => '20'
-  }
+  }.freeze
 
   AllowedCodes = ['84242']
 
-  def login (codigo, senha)
+  def login(codigo, senha)
     @agent = agent
 
     page = @agent.get URL_LOGIN
@@ -63,13 +63,13 @@ module CrawlerHelper
 
     button = form.buttons.first
     page = form.submit button
-    if page.title != '.:: BSGI Extranet ::.' then
+    if page.title != '.:: BSGI Extranet ::.'
       return @agent
     else return false
     end
   end
 
-  def reservar (sede, atividade, sala, data, inicio, fim, previsao)
+  def reservar (sede, atividade, sala, data, inicio, fim, _previsao)
     url_reserva = sede == 'CCSUL' ? URL_CCSUL : URL_INTERLAGOS
     capacidade = sede == 'CCSUL' ? CAPACIDADE_CCSUL : CAPACIDADE_INTERLAGOS
     page = @agent.get url_reserva
@@ -81,35 +81,33 @@ module CrawlerHelper
     form.field_with(name: 'sala').value = sala
     form.field_with(name: 'inicio').value = inicio
     form.field_with(name: 'fim').value = fim
-    form.field_with(name: 'divisao').value = '13' #13 = GH - ENSAIO
+    form.field_with(name: 'divisao').value = '13' # 13 = GH - ENSAIO
     button = form.buttons.first
-    page = form.submit button
+    form.submit button
   end
 
-  def extract_text (url)
+  def extract_text(url)
     page = @agent.get url
     content = page.search("//div[@id='conteudo']")
     content.search("//div[@id='intro']").remove
     content.search("//div[@id='notas']").remove
     content.search("//div[@class='ui icon large teal message']").remove
-    return content[0]
+    content[0]
   end
 
-  def extract_article (url)
+  def extract_article(url)
     page = @agent.get url
     header = page.search("//h1[@class='ui header']")
     subtitle = header.search("//div[@class='sub header']").remove
     subtitle.search('//img').remove
     subtitle[0].inner_html = '<i>' + subtitle[0].inner_html + '</i>'
     content = extract_text url
-    if content.nil?
-      return ''
-    end
-    if !subtitle[0].nil?
-      header << subtitle[0]
-    end
+    return '' if content.nil?
+
+    header << subtitle[0] unless subtitle[0].nil?
+
     header << content
-    return header
+    header
   end
 
   def schedule_reserve(date)
@@ -132,13 +130,6 @@ module CrawlerHelper
     agent.open_timeout = 30
     agent.read_timeout = 30
     agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    return agent
+    agent
   end
 end
-
-
-
-
-
-
-

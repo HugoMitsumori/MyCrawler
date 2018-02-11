@@ -11,8 +11,6 @@ body{
 }
 
 .form-container{
-  height: 500px;
-  width: 800px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px #dddddd;
@@ -24,9 +22,15 @@ body{
   form{
     margin: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+
+    .left, .right {
+      width: 250px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+    }
   }
 }
 
@@ -35,20 +39,22 @@ label{
   margin-bottom: 5px;
 }
 
-input[type=password]{
-  width: 300px;
+input[type=password], input[type=text]{
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px #aaa;
 }
 
-input[type=text]{
-  width: 300px;
-}
-
-input[type=submit]{
+input[type=submit], button{
   background-color: #114758;
   border: none;
   border-radius: 5px;
   height: 40px;
-  width: 80px;
+  width: 100px;
   font-family: 'Acme', sans-serif;
   font-size: 16px;
   color: white;
@@ -57,6 +63,7 @@ input[type=submit]{
 }
 
 .rooms-container{
+  width: 200px;
   padding: 5px;
   box-shadow: 0 0 5px #cccccc;
   border-radius: 5px;
@@ -65,4 +72,16 @@ input[type=submit]{
   h5{
     margin: 5px;
   }
+}
+
+.flex {
+  display: flex;
+}
+
+iframe {
+  width: 500px;
+}
+
+#reserve-message {
+  font-size: 18px;
 }

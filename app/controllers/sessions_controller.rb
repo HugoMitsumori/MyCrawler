@@ -9,17 +9,16 @@ class SessionsController < ApplicationController
     @user = User.new(user_params)
     if CrawlerHelper::AllowedCodes.include? @user.code
       crawler = Crawler.instance
-      if (agent = crawler.login(@user.code, @user.password))
-        session[:user] = @user        
-        crawler.agent = agent
+      if crawler.login(@user.code, @user.password)
+        session[:user] = @user
         crawler.code = @user.code
         crawler.password = @user.password
-        redirect_to new_reserve_path, :user => @user
+        redirect_to new_reserve_path, user: @user
       else
         puts 'FAIL'
       end
     end
-    # puts @user
+    gon.logado = 'sim'
   end
 
   private
