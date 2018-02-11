@@ -1,11 +1,13 @@
 %h1 Entrar
 
 .form-container
-  = form_for :user, url: '/sessions', remote: true do |f|
-    = f.label 'Código:'
-    = f.text_field :code
+  = form_for :user, url: '/sessions', remote: true, html: {id: 'login-form'} do |f|
+    .left
+      = f.label 'Código (sem último dígito):'
+      = f.text_field :code
 
-    = f.label 'Senha:'
-    = f.password_field :password
+      = f.label 'Senha:'
+      = f.password_field :password
 
-    = f.submit 'Entrar'
+      = f.submit 'Entrar', id: 'login-button'
+      #session-message

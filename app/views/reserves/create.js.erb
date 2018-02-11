@@ -1,0 +1,15 @@
+$(document).ready(function() {  
+  salas = '';  
+  $('#reserve-message').empty();
+  $('#reserve-message').append(
+    "<% if success.length > 0 %>" +
+      "As seguintes salas foram reservadas: " +
+      "<% success.each do |room| %>"+
+        "<%= "#{room} " %>" +
+        "<% end %>" +
+      "<br>Favor conferir a reserva na extranet!" +
+    "<% else %>" +
+      "Nenhuma reserva foi realizada..." +
+    "<% end %>"
+  );
+});
