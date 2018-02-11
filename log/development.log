@@ -19986,3 +19986,33 @@ Processing by ReservesController#create as JS
 Completed 200 OK in 8930ms (Views: 5.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-11 21:41:58 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 543ms (Views: 409.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-11 21:42:00 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 3151ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-02-11 21:42:03 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-11 21:44:50 -0200
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 109ms
+
+
+  
+Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  
+app/controllers/sessions_controller.rb:5:in `new'
