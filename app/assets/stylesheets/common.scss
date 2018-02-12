@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Acme|Sedgwick+Ave');
+@import 'mixins';
 
-body{
+* {
+  margin: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,27 +15,43 @@ body{
   color: #555555;
 }
 
-.form-container{
+h1 {
+  margin: 20px;
+}
+
+.login { max-width: 350px; }
+
+.form-container {
+  width: 95vw;
+  padding: 20px 0;
+  margin-top: 10px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px #dddddd;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 
   form{
-    margin: 10px;
+    padding: 20px;
     display: flex;
-
-    .column {
-      width: 250px;
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-    }
+    flex-direction: column;
   }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+}
+
+#reservation-message {
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #efefff;
+  order: 1;
 }
 
 label{
@@ -38,9 +59,9 @@ label{
   margin-bottom: 5px;
 }
 
-input[type=password], input[type=text]{
-  width: 250px;
-  height: 30px;
+input[type=password], input[type=text] {
+  width: calc(100% - 10px);
+  height: 20px;
   padding: 5px;
   font-size: 16px;
   border-radius: 5px;
@@ -48,7 +69,7 @@ input[type=password], input[type=text]{
   box-shadow: 0 0 5px #aaa;
 }
 
-input[type=submit], button{
+input[type=submit], button {
   background-color: #114758;
   border: none;
   border-radius: 5px;
@@ -58,30 +79,71 @@ input[type=submit], button{
   font-size: 16px;
   color: white;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.rooms{
-  width: 200px;
+#fill-form { margin-left: 20px }
+
+.rooms {
   padding: 5px;
   box-shadow: 0 0 5px #cccccc;
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
 
-  h5{
-    margin: 5px;
+  h3 {
+    width: 100%;
   }
+
+  label { width: 200px; }
 }
 
 .flex {
   display: flex;
 }
 
-iframe {
-  width: 500px;
-}
+a { margin-top: 20px; }
 
-#reservation-message {
-  font-size: 18px;
+
+@media screen and (min-width: 768px) {
+  .form-container {
+    width: 750px;
+
+    form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .fields {
+      max-width: 300px;
+      width: 300px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .rooms {
+    max-width: 300px;
+    margin: 0 20px;
+    padding: 10px;
+  }
+
+  input[type=password], input[type=text] {
+    height: 20px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #aaa;
+  }
+
+  input[type=submit], button {
+    margin-right: 100%;
+  }
+
+  #reservation-message {
+    order: 0;
+  }
 }

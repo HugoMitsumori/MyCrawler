@@ -1,8 +1,8 @@
 %h1 Entrar
 
-.form-container
+.form-container.login
   = form_for :user, url: '/sessions', remote: true, html: {id: 'login-form'} do |f|
-    .column
+    .fields
       = f.label 'Código (sem último dígito):'
       = f.text_field :code
 
