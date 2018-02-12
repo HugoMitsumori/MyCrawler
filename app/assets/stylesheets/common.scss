@@ -29,7 +29,6 @@ body{
       display: flex;
       flex-direction: column;
       align-items: left;
-      justify-content: center;
     }
   }
 }
@@ -59,7 +58,8 @@ input[type=submit], button{
   font-size: 16px;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 .rooms{
@@ -82,6 +82,6 @@ iframe {
   width: 500px;
 }
 
-#reserve-message {
+#reservation-message {
   font-size: 18px;
 }

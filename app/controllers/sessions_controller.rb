@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         session[:user] = @user
         crawler.code = @user.code
         crawler.password = @user.password
-        redirect_to new_reserve_path, user: @user
+        redirect_to new_reservation_path, user: @user
       else
         puts 'FAIL'
       end

@@ -3,18 +3,18 @@ $(document).on('turbolinks:load', function() {
     $('#session-message').append('Entrando. Aguarde...');
   });
 
-  var reserveProcessingMessage = function() {
-    $('#reserve-message').empty();
-    $('#reserve-message').append('Processando reservas. Aguarde...');
+  var reservationProcessingMessage = function() {
+    $('#reservation-message').empty();
+    $('#reservation-message').append('Processando reservas. Aguarde...');
   };
 
-  $('#reserve-form').on('submit', reserveProcessingMessage);
-  $('#reserve-submit').on('click', reserveProcessingMessage);
+  $('#reservation-form').on('submit', reservationProcessingMessage);
+  $('#reservation-submit').on('click', reservationProcessingMessage);
 
   $('#fill-form').on('click', function() {
-    $('#reserve_name').val('Ensaio do Taiyo Ongakutai');
-    $('#reserve_organization').val('Núcleo Sul');
-    $('#reserve_division').val('13');
-    $('#reserve_members').val('50');
+    $('#reservation_name').val('Ensaio do Taiyo Ongakutai');
+    $('#reservation_organization').val('Núcleo Sul');
+    $('#reservation_division').val('13');
+    $('#reservation_members').val('50');
   });
 });

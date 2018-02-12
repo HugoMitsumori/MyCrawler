@@ -109,7 +109,7 @@ module CrawlerHelper
     header
   end
 
-  def schedule_reserve(date)
+  def schedule_reservation(date)
     script = File.new("#{date}.bat", '+w')
     dir = Dir.pwd
     script.puts "cd #{dir}"

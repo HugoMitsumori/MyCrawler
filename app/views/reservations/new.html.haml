@@ -1,9 +1,9 @@
 %h1 Reserva de Salas
 
-#reserve-message
+#reservation-message
 
 .form-container
-  = form_for :reserve, url: '/reserves', remote: true, html: {id: 'reserve-form'} do |f|
+  = form_for :reservation, url: '/reservations', remote: true, html: {id: 'reservation-form'} do |f|
 
     .column
       = f.label 'Nome padrão da atividade:'
@@ -18,7 +18,7 @@
       = f.label 'Horário de término (hh:mm):'
       = f.text_field :finish_time
 
-      = f.submit 'Reservar', id: 'reserve-submit'
+      = f.submit 'Reservar', id: 'reservation-submit'
 
       = link_to 'Voltar', '/'
 
