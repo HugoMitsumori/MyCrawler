@@ -20408,3 +20408,40 @@ Processing by ReservesController#create as JS
 Completed 200 OK in 9ms (Views: 6.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-11 22:44:35 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 182ms (Views: 175.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-11 22:44:36 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 3045ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-02-11 22:44:39 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-02-11 22:44:41 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio do Taiyo Ongakutai", "date"=>"", "start_time"=>"", "finish_time"=>"", "rooms"=>"", "organization"=>"Núcleo Sul", "division"=>"13", "members"=>"50"}, "button"=>"", "commit"=>"Reservar"}
+  Rendering reserves/create.js.erb
+  Rendered reserves/create.js.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.9ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-02-11 22:44:53 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio do Taiyo Ongakutai", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "rooms"=>"76", "organization"=>"Núcleo Sul", "division"=>"13", "members"=>"50"}, "button"=>"", "commit"=>"Reservar"}
+  Rendering reserves/create.js.erb
+  Rendered reserves/create.js.erb (0.3ms)
+Completed 200 OK in 13030ms (Views: 1.4ms)
+
+
