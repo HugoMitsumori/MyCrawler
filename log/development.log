@@ -20373,3 +20373,38 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 29ms (Views: 28.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-11 22:41:57 -0200
+  
+ActionController::RoutingError (Couldn't find CrawlerHelper, expected it to be defined in helpers/crawler_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/sessions_controller.rb:2:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-11 22:42:10 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 153ms (Views: 152.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-11 22:42:12 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reserves/new
+Completed 200 OK in 3059ms
+
+
+Started GET "/reserves/new" for 127.0.0.1 at 2018-02-11 22:42:15 -0200
+Processing by ReservesController#new as HTML
+  Rendering reserves/new.html.haml within layouts/application
+  Rendered reserves/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 24.9ms)
+
+
+Started POST "/reserves" for 127.0.0.1 at 2018-02-11 22:42:18 -0200
+Processing by ReservesController#create as JS
+  Parameters: {"utf8"=>"✓", "reserve"=>{"name"=>"Ensaio do Taiyo Ongakutai", "date"=>"", "start_time"=>"", "finish_time"=>"", "rooms"=>"", "organization"=>"Núcleo Sul", "division"=>"13", "members"=>"50"}, "button"=>"", "commit"=>"Reservar"}
+  Rendering reserves/create.js.erb
+  Rendered reserves/create.js.erb (1.2ms)
+Completed 200 OK in 9ms (Views: 6.9ms)
+
+
