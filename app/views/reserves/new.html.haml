@@ -5,7 +5,7 @@
 .form-container
   = form_for :reserve, url: '/reserves', remote: true, html: {id: 'reserve-form'} do |f|
 
-    .left
+    .column
       = f.label 'Nome padrão da atividade:'
       = f.text_field :name
 
@@ -18,14 +18,11 @@
       = f.label 'Horário de término (hh:mm):'
       = f.text_field :finish_time
 
-      = f.label 'Salas (códigos, separados por espaço):'
-      = f.text_field :rooms
-
       = f.submit 'Reservar', id: 'reserve-submit'
 
       = link_to 'Voltar', '/'
 
-    .right
+    .column
       = button_tag 'Ongakutai', type: 'button', id: 'fill-form'
 
       = f.label 'Organização:'
@@ -38,7 +35,9 @@
       = f.text_field :members
 
 
-  .rooms-container
-    %h3 Código das Salas:
-    - @rooms.each do |room, number|
-      %h5 #{number} - #{room}
+    .column.rooms
+      %h3 Código das Salas:
+      - @rooms.each do |room, number|
+        = f.label room do
+          = f.check_box :rooms, { multiple: true }, number
+          = room

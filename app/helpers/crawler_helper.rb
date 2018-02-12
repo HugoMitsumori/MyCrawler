@@ -1,6 +1,7 @@
+# provides data and useful methods
 module CrawlerHelper
   URL = 'https://extra2.bsgi.org.br'.freeze
-  URL_LOGIN =  'https://extra2.bsgi.org.br/login/'.freeze
+  URL_LOGIN = 'https://extra2.bsgi.org.br/login/'.freeze
   URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'.freeze
   URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'.freeze
 
@@ -15,7 +16,7 @@ module CrawlerHelper
     'HARMONIA' => '72',
     'SOL DA ESPERANÇA' => '73',
     'VISITAS' => '75',
-    'PILAR' => '76',
+    'PILAR' => '76'
   }.freeze
 
   SALAS_INTERLAGOS = {
@@ -37,7 +38,7 @@ module CrawlerHelper
     '72' => '30',
     '73' => '30',
     '75' => '10',
-    '76' => '10',
+    '76' => '10'
   }.freeze
 
   CAPACIDADE_INTERLAGOS = {
@@ -48,7 +49,7 @@ module CrawlerHelper
     '92' => '20'
   }.freeze
 
-  AllowedCodes = ['84242']
+  ALLOWED_CODES = ['84242'].freeze
 
   def login(codigo, senha)
     @agent = agent
@@ -63,13 +64,11 @@ module CrawlerHelper
 
     button = form.buttons.first
     page = form.submit button
-    if page.title != '.:: BSGI Extranet ::.'
-      return @agent
-    else return false
-    end
+    return @agent if page.title != '.:: BSGI Extranet ::.'
+    false
   end
 
-  def reservar (sede, atividade, sala, data, inicio, fim, _previsao)
+  def reservar(sede, atividade, sala, data, inicio, fim, _previsao)
     url_reserva = sede == 'CCSUL' ? URL_CCSUL : URL_INTERLAGOS
     capacidade = sede == 'CCSUL' ? CAPACIDADE_CCSUL : CAPACIDADE_INTERLAGOS
     page = @agent.get url_reserva

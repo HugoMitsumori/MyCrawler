@@ -23,7 +23,7 @@ body{
     margin: 10px;
     display: flex;
 
-    .left, .right {
+    .column {
       width: 250px;
       margin: 20px;
       display: flex;
@@ -62,7 +62,7 @@ input[type=submit], button{
   margin-top: 20px;
 }
 
-.rooms-container{
+.rooms{
   width: 200px;
   padding: 5px;
   box-shadow: 0 0 5px #cccccc;

@@ -2,7 +2,7 @@
 
 .form-container
   = form_for :user, url: '/sessions', remote: true, html: {id: 'login-form'} do |f|
-    .left
+    .column
       = f.label 'Código (sem último dígito):'
       = f.text_field :code
 

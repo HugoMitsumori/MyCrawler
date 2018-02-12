@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if CrawlerHelper::AllowedCodes.include? @user.code
+    if CrawlerHelper::ALLOWED_CODES.include? @user.code
       crawler = Crawler.instance
       if crawler.login(@user.code, @user.password)
         session[:user] = @user
