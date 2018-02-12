@@ -38,6 +38,6 @@
     .column.rooms
       %h3 Código das Salas:
       - @rooms.each do |room, number|
-        = f.label room do
+        = f.label "rooms_#{number}" do
           = f.check_box :rooms, { multiple: true }, number
           = room

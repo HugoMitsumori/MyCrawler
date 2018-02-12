@@ -11,8 +11,6 @@ class SessionsController < ApplicationController
       crawler = Crawler.instance
       if crawler.login(@user.code, @user.password)
         session[:user] = @user
-        crawler.code = @user.code
-        crawler.password = @user.password
         redirect_to new_reservation_path, user: @user
       else
         puts 'FAIL'

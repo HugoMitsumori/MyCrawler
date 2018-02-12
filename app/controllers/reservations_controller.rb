@@ -10,22 +10,18 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    success_reservations = []
+    success_rooms = []
     crawler = Crawler.instance
-    @reservation = reservation_params
-    @reservation[:rooms].delete '0'
-    @reservation[:rooms].each do |room|
-      page = crawler.reserve(
-        'CCSUL', @reservation[:name], room, @reservation[:date],
-        @reservation[:start_time], @reservation[:finish_time],
-        @reservation[:members], @reservation[:organization], @reservation[:division]
-      )
+    @reservation = Reservation.new(reservation_params)
+    @reservation.rooms.each do |room|
+      page = crawler.reserve('CCSUL', room, @reservation)
+      puts page.inspect
       next if page.nil? or page.forms.first.field_with(name: 'data').value != ''
-      success_reservations << room
+      success_rooms << room
       sleep 2
     end
     respond_to do |format|
-      format.js { render 'create', locals: { success: success_reservations } }
+      format.js { render 'create', locals: { success: success_rooms } }
     end
   end
 
