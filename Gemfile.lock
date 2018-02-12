@@ -196,8 +196,6 @@ GEM
     public_suffix (3.0.1)
     puma (3.11.2)
     rack (2.0.3)
-    rack-iframe (0.0.3)
-      rack
     rack-livereload (0.3.16)
       rack
     rack-test (0.8.2)
@@ -348,7 +346,6 @@ DEPENDENCIES
   pre-commit
   pry
   puma (~> 3.7)
-  rack-iframe
   rack-livereload
   rails (~> 5.1.4)
   rails_best_practices
