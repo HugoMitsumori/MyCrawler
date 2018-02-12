@@ -1,13 +1,23 @@
 %h1 Reserva de Salas
 
-#reservation-message
-
 .form-container
+
+  #reservation-message
+
+  = button_tag 'Ongakutai', type: 'button', id: 'fill-form'
+
   = form_for :reservation, url: '/reservations', remote: true, html: {id: 'reservation-form'} do |f|
 
-    .column
+    .fields
+
       = f.label 'Nome padrão da atividade:'
       = f.text_field :name
+
+      = f.label 'Organização:'
+      = f.text_field :organization
+
+      = f.label 'Divisão (1 = 5D, 13 = GH):'
+      = f.text_field :division
 
       = f.label 'Data (dd/mm/aaaa):'
       = f.text_field :date
@@ -18,26 +28,16 @@
       = f.label 'Horário de término (hh:mm):'
       = f.text_field :finish_time
 
-      = f.submit 'Reservar', id: 'reservation-submit'
-
-      = link_to 'Voltar', '/'
-
-    .column
-      = button_tag 'Ongakutai', type: 'button', id: 'fill-form'
-
-      = f.label 'Organização:'
-      = f.text_field :organization
-
-      = f.label 'Divisão (1 = 5D, 13 = GH):'
-      = f.text_field :division
-
       = f.label 'Número previsto de membros:'
       = f.text_field :members
 
-
-    .column.rooms
-      %h3 Código das Salas:
+    .rooms
+      %h3 Salas a serem reservadas:
       - @rooms.each do |room, number|
         = f.label "rooms_#{number}" do
           = f.check_box :rooms, { multiple: true }, number
           = room
+
+    = f.submit 'Reservar', id: 'reservation-submit'
+
+    = link_to 'Voltar', '/'

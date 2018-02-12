@@ -19,6 +19,6 @@ class Reservation
   end
 
   def members=(value)
-    @members = Integer(value)
+    @members = Integer(value) unless value.empty?
   end
 end
