@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $('#login-form').on('submit', function() {
     $('#session-message').append('Entrando. Aguarde...');
   });
