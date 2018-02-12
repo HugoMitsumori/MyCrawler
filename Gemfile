@@ -64,7 +64,6 @@ group :development do
   gem 'guard-zeus'
   gem 'guard-livereload'
   gem 'rack-livereload'
-  gem 'rack-iframe'
   gem 'pry'
   gem 'haml'
 end
