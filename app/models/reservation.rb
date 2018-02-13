@@ -1,7 +1,7 @@
 # Reservation
 class Reservation
   include ActiveModel::Model
-  attr_accessor :name, :date, :organization, :division
+  attr_accessor :name, :date, :organization, :division, :center
   attr_reader :rooms, :start_time, :finish_time, :members
 
   def rooms=(value)

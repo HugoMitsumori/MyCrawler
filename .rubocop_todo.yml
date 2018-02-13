@@ -146,6 +146,9 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Max: 30
 
+Metrics/ClassLength:
+  Max: 120
+
 # Offense count: 6
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
@@ -164,6 +167,12 @@ Performance/StringReplacement:
     - 'modules/reservas.rb'
 
 Style/AndOr:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 # Offense count: 1

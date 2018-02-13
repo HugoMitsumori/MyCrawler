@@ -69,7 +69,7 @@ input[type=password], input[type=text] {
   box-shadow: 0 0 5px #aaa;
 }
 
-input[type=submit], button {
+input[type=submit], button, .link {
   background-color: #114758;
   border: none;
   border-radius: 5px;
@@ -81,6 +81,15 @@ input[type=submit], button {
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+.link {
+  text-decoration: none;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-right: 10px;
+  text-align: center;
 }
 
 #fill-form { margin-left: 20px }
@@ -97,7 +106,7 @@ input[type=submit], button {
     width: 100%;
   }
 
-  label { width: 200px; }
+  label { width: 250px; }
 }
 
 .flex {

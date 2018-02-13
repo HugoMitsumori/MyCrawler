@@ -31,13 +31,15 @@
       = f.label 'Número previsto de membros:'
       = f.text_field :members
 
+      = f.hidden_field :center, value: @center
+
     .rooms
       %h3 Salas a serem reservadas:
-      - @rooms.each do |room, number|
+      - @rooms.each do |number, room|
         = f.label "rooms_#{number}" do
           = f.check_box :rooms, { multiple: true }, number
           = room
 
     = f.submit 'Reservar', id: 'reservation-submit'
 
-    = link_to 'Voltar', '/'
+    = link_to 'Voltar', reservations_choose_path
