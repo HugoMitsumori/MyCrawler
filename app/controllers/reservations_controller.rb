@@ -6,7 +6,8 @@ class ReservationsController < ApplicationController
 
   def new
     puts session[:user]
-    @rooms = CrawlerHelper::CCSUL_ROOMS
+    @center = params[:center]
+    @rooms = Crawler.instance.rooms(@center)
   end
 
   def create
@@ -14,10 +15,10 @@ class ReservationsController < ApplicationController
     crawler = Crawler.instance
     @reservation = Reservation.new(reservation_params)
     @reservation.rooms.each do |room|
-      page = crawler.reserve('CCSUL', room, @reservation)
+      page = crawler.reserve(room, @reservation)
       puts page.inspect
       next if page.nil? or page.forms.first.field_with(name: 'data').value != ''
-      success_rooms << room
+      success_rooms << crawler.room_name(@reservation.center, room)
       sleep 2
     end
     respond_to do |format|
@@ -25,12 +26,16 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def choose
+    @centers = Crawler::CENTER_CODES.keys
+  end
+
   private
 
   def reservation_params
     params.require(:reservation).permit(
       :name, :date, :start_time, :finish_time,
-      :members, :organization, :division, rooms: []
+      :members, :organization, :division, :center, rooms: []
     )
   end
 end

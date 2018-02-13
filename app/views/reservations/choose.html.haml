@@ -1,0 +1,7 @@
+%h1 Escolha a sede:
+
+.flex
+  - @centers.each do |center|
+    = link_to center, new_reservation_path(center: center), class: 'link'
+
+= link_to 'Voltar', root_path

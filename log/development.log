@@ -23300,3 +23300,2004 @@ Processing by ReservationsController#new as HTML
 Completed 200 OK in 43ms (Views: 41.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:24:38 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (115.3ms)
+Completed 200 OK in 2025ms (Views: 2012.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:24:52 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/new
+Completed 200 OK in 4154ms
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2018-02-13 10:24:57 -0200
+Processing by ReservationsController#new as HTML
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (164.8ms)
+Completed 200 OK in 211ms (Views: 191.6ms)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2018-02-13 10:25:17 -0200
+Processing by ReservationsController#new as HTML
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 213ms (Views: 209.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:35:34 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 24.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:35:35 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 3922ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:35:39 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:36:12 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:37:00 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:37:02 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:37:06 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:39:03 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:39:05 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 5917ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:39:11 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:39:25 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:39:26 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:40:37 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:40:38 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:40:44 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:40:45 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 7755ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:40:53 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:41:25 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:41:28 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:41:29 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 3763ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:41:33 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:41:52 -0200
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"choose"}
+Completed 406 Not Acceptable in 8ms
+
+
+  
+ActionController::UnknownFormat (ReservationsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:42:26 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 565ms (Views: 559.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:42:28 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 4092ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:42:32 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:47:17 -0200
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReservationsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+request_store (1.4.0) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:23:in `_call'
+rack-livereload (0.3.16) lib/rack/livereload.rb:14:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:49:25 -0200
+Processing by ReservationsController#choose as HTML
+Redirected to http://localhost:3000/reservations/new
+Completed 302 Found in 0ms
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2018-02-13 10:49:25 -0200
+Processing by ReservationsController#new as HTML
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (91.9ms)
+Completed 200 OK in 113ms (Views: 111.7ms)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2018-02-13 10:49:34 -0200
+Processing by ReservationsController#new as HTML
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 33ms (Views: 31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:49:36 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 19.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:49:37 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 6017ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:49:43 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.6ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:56:57 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 10:57:03 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 38ms (Views: 35.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:57:07 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 10:57:08 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 19215ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 10:57:27 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.6ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 10:57:34 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 46ms (Views: 43.8ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 10:58:12 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 604ms (Views: 602.2ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 10:58:43 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 133ms (Views: 132.7ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 10:58:58 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 432ms (Views: 431.6ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 10:59:04 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 347ms (Views: 346.0ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:00:34 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 33ms (Views: 30.7ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:00:57 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 175ms (Views: 162.5ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:01:04 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 497ms (Views: 495.9ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:01:14 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 1021ms (Views: 1018.5ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:01:35 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 177ms (Views: 175.3ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:01:38 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 23.1ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:01:43 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 310ms (Views: 307.6ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:02:10 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 400ms (Views: 398.6ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:02:14 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 182ms (Views: 176.4ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:02:46 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 1107ms (Views: 1093.9ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:03:52 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 125ms (Views: 120.4ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:04:05 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 46ms (Views: 42.6ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:04:33 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (184.1ms)
+Completed 500 Internal Server Error in 189ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `reservations_choose' for #<#<Class:0x00007fb580072320>:0x00007fb5849d2858>
+Did you mean?  reservations_choose_url
+               reservations_choose_path):
+    40: 
+    41:     = f.submit 'Reservar', id: 'reservation-submit'
+    42: 
+    43:     = link_to 'Voltar', reservations_choose
+  
+app/views/reservations/new.html.haml:43:in `block in _app_views_reservations_new_html_haml___1074242703641173937_70208795351460'
+app/views/reservations/new.html.haml:9:in `_app_views_reservations_new_html_haml___1074242703641173937_70208795351460'
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:04:35 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 46ms (Views: 43.9ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:04:38 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (26.2ms)
+Completed 200 OK in 52ms (Views: 49.0ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:04:39 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:05:12 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 43.0ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:05:53 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 343ms (Views: 339.1ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:06:24 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 46ms (Views: 43.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:06:29 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 42ms (Views: 41.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 11:06:31 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 6436ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:06:38 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 16.4ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:08:27 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 43ms (Views: 40.4ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:09:23 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 17.2ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:09:25 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 2206ms (Views: 30.5ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:11:31 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 43ms (Views: 40.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:11:34 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.7ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:11:34 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 2815ms (Views: 33.8ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:12:35 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 124ms (Views: 114.8ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:13:19 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 44.2ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:13:21 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 45ms (Views: 42.4ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:14:24 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.6ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:14:25 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 9705ms (Views: 76.8ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:14:40 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 37.8ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:14:41 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 2085ms (Views: 68.7ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:14:44 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 28.9ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:14:45 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 35ms (Views: 32.7ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:14:49 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.1ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:14:49 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 36ms (Views: 32.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:14:56 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:14:57 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 52ms (Views: 48.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:15:00 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:15:00 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 43ms (Views: 39.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:15:06 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:15:07 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (17.0ms)
+Completed 200 OK in 49ms (Views: 45.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:15:30 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "68", "0", "0", "65", "0", "0", "0", "66", "0", "0", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (0.6ms)
+Completed 200 OK in 17456ms (Views: 2.8ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:18:49 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "68", "0", "0", "65", "0", "0", "0", "66", "0", "0", "0", "67", "0"]}, "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 6ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:47:in `reserve'
+app/controllers/reservations_controller.rb:19:in `block in create'
+app/controllers/reservations_controller.rb:18:in `each'
+app/controllers/reservations_controller.rb:18:in `create'
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:26:36 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 2407ms
+
+
+  
+SyntaxError (/home/hugo/MyCrawler/app/views/reservations/new.html.haml:43: syntax error, unexpected '\n', expecting =>
+/home/hugo/MyCrawler/app/views/reservations/new.html.haml:46: syntax error, unexpected '}', expecting ')'
+));}\n", 0, false);end;_hamlout.b...
+    ^
+/home/hugo/MyCrawler/app/views/reservations/new.html.haml:46: syntax error, unexpected $undefined, expecting ')'
+...aml_temp);_hamlout.push_text("\n</div>\n", -1, false);::Haml...
+...                               ^
+/home/hugo/MyCrawler/app/views/reservations/new.html.haml:49: unterminated regexp meets end of file
+/home/hugo/MyCrawler/app/views/reservations/new.html.haml:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+  
+app/views/reservations/new.html.haml:43: syntax error, unexpected '\n', expecting =>
+app/views/reservations/new.html.haml:46: syntax error, unexpected '}', expecting ')'
+app/views/reservations/new.html.haml:46: syntax error, unexpected $undefined, expecting ')'
+app/views/reservations/new.html.haml:49: unterminated regexp meets end of file
+app/views/reservations/new.html.haml:49: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:27:16 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 22.6ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:28:07 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.8ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:28:13 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 2625ms (Views: 28.5ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:28:44 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:47:in `reserve'
+app/controllers/reservations_controller.rb:19:in `block in create'
+app/controllers/reservations_controller.rb:18:in `each'
+app/controllers/reservations_controller.rb:18:in `create'
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:30:39 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 5ms
+
+
+  
+NoMethodError (undefined method `center' for nil:NilClass):
+  
+app/models/crawler.rb:47:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:30:49 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 5ms
+
+
+  
+NoMethodError (undefined method `center' for nil:NilClass):
+  
+app/models/crawler.rb:47:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:31:07 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:48:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:31:08 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:48:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:31:18 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "65", "0", "0", "0", "66", "0", "0", "73", "0", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:49:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:31:20 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:31:21 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 2556ms (Views: 32.6ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:31:35 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "0", "0", "0", "76", "0", "66", "0", "0", "0", "67", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:49:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:33:01 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 185ms (Views: 179.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 11:33:03 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 3679ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:33:07 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 15.8ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:33:09 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (70.7ms)
+Completed 200 OK in 2215ms (Views: 87.1ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:33:30 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "rooms"=>["0", "0", "0", "0", "70", "0", "0", "0", "0", "66", "0", "0", "0", "67", "0"]}, "center"=>"CCSUL", "commit"=>"Reservar"}
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NoMethodError (undefined method `to_sym' for nil:NilClass
+Did you mean?  to_s):
+  
+app/models/crawler.rb:49:in `reserve'
+app/controllers/reservations_controller.rb:18:in `block in create'
+app/controllers/reservations_controller.rb:17:in `each'
+app/controllers/reservations_controller.rb:17:in `create'
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:34:38 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 34ms
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "CCSUL":String):
+    31:       = f.label 'Número previsto de membros:'
+    32:       = f.text_field :members
+    33: 
+    34:       = f.hidden_field :center, @center
+    35: 
+    36:     .rooms
+    37:       %h3 Salas a serem reservadas:
+  
+app/views/reservations/new.html.haml:34:in `block in _app_views_reservations_new_html_haml___3352015662985382031_69974083659180'
+app/views/reservations/new.html.haml:9:in `_app_views_reservations_new_html_haml___3352015662985382031_69974083659180'
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:35:42 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (33.4ms)
+Completed 200 OK in 60ms (Views: 58.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:36:02 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "center"=>"CCSUL", "rooms"=>["0", "0", "0", "0", "70", "0", "0", "0", "0", "66", "0", "71", "0", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (0.3ms)
+Completed 200 OK in 16955ms (Views: 1.4ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:37:23 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "center"=>"CCSUL", "rooms"=>["0", "0", "0", "0", "70", "0", "0", "0", "0", "66", "0", "71", "0", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (0.5ms)
+Completed 200 OK in 16484ms (Views: 2.4ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:37:58 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio do Taiyo Ongakutai", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/01/2018", "start_time"=>"10:00", "finish_time"=>"12:00", "members"=>"50", "center"=>"CCSUL", "rooms"=>["0", "0", "0", "0", "70", "0", "0", "0", "0", "66", "0", "71", "0", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (0.6ms)
+Completed 200 OK in 17609ms (Views: 2.2ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:49:14 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.0ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:49:15 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 2085ms (Views: 33.5ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:49:53 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 47ms (Views: 44.5ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:49:54 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (21.5ms)
+Completed 200 OK in 48ms (Views: 44.4ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:50:01 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:50:02 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 434ms (Views: 37.8ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:50:10 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:50:11 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 18.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 11:50:13 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 4963ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:50:18 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.6ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:50:19 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 51ms (Views: 48.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:50:39 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 139ms (Views: 134.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 11:50:41 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 5198ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:50:46 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.8ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:50:48 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (93.3ms)
+Completed 200 OK in 2111ms (Views: 110.9ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:51:45 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio dos eufonios", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"27/02/2018", "start_time"=>"19:00", "finish_time"=>"21:00", "members"=>"5", "center"=>"CCSUL", "rooms"=>["0", "0", "0", "0", "0", "0", "0", "76", "0", "0", "0", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (1.5ms)
+Completed 200 OK in 9796ms (Views: 52.4ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:52:58 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 31.4ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:52:59 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 448ms (Views: 57.1ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:53:09 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 48.4ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:53:10 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 59ms (Views: 56.7ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:53:13 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 92ms (Views: 90.4ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:53:14 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 40ms (Views: 38.2ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:53:35 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 38.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:53:37 -0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-02-13 11:53:38 -0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Redirected to http://localhost:3000/reservations/choose
+Completed 200 OK in 3926ms
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:53:42 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:53:44 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:55:36 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.3ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:55:37 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 2063ms (Views: 31.8ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:55:45 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.4ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:55:46 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 48ms (Views: 44.9ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:55:48 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.2ms)
+
+
+Started GET "/reservations/new?center=CCSUL" for 127.0.0.1 at 2018-02-13 11:55:49 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"CCSUL"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 2017ms (Views: 33.0ms)
+
+
+Started GET "/reservations/choose" for 127.0.0.1 at 2018-02-13 11:55:54 -0200
+Processing by ReservationsController#choose as HTML
+  Rendering reservations/choose.html.haml within layouts/application
+  Rendered reservations/choose.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 21.8ms)
+
+
+Started GET "/reservations/new?center=INTERLAGOS" for 127.0.0.1 at 2018-02-13 11:55:55 -0200
+Processing by ReservationsController#new as HTML
+  Parameters: {"center"=>"INTERLAGOS"}
+  Rendering reservations/new.html.haml within layouts/application
+  Rendered reservations/new.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 47ms (Views: 44.8ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2018-02-13 11:56:40 -0200
+Processing by ReservationsController#create as JS
+  Parameters: {"utf8"=>"✓", "reservation"=>{"name"=>"Ensaio dos eufonios", "organization"=>"Núcleo Sul", "division"=>"13", "date"=>"24/02/2018", "start_time"=>"17:00", "finish_time"=>"19:00", "members"=>"5", "center"=>"INTERLAGOS", "rooms"=>["0", "0", "88", "0", "89", "0", "0"]}, "commit"=>"Reservar"}
+  Rendering reservations/create.js.erb
+  Rendered reservations/create.js.erb (1.1ms)
+Completed 200 OK in 18348ms (Views: 5.6ms)
+
+

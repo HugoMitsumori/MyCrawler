@@ -16,6 +16,7 @@ class Crawler
   }.freeze
 
   def login(code, password)
+    puts 'LOGGING IN'
     page = agent.get URL_LOGIN
     form = page.forms.first
 
@@ -41,10 +42,11 @@ class Crawler
     end
   end
 
-  def reserve(center_name, room, reservation)
+  def reserve(room, reservation)
     ensure_logged_in
-    url_reservation = BASE_URL + RESERVATION_URL + CENTER_CODES[center_name.to_sym]
-    room_capacity = capacity(center_name)[rooms(center_name)[room]]
+    center = reservation.center
+    url_reservation = BASE_URL + RESERVATION_URL + CENTER_CODES[center.to_sym]
+    room_capacity = capacity(center)[rooms(center)[room]]
     members = room_capacity > reservation.members ? reservation.members.to_s : room_capacity.to_s
     page = agent.get url_reservation
     form = page.forms.first
@@ -64,6 +66,7 @@ class Crawler
   def capacity(center_name)
     @rooms_capacity = {} if @rooms_capacity.nil?
     return @rooms_capacity[center_name] unless @rooms_capacity[center_name].nil?
+    puts 'GETTING CAPACITY FROM SERVER'
     ensure_logged_in
     url = BASE_URL + ROOMS_CAPACITY_URL + CENTER_CODES[center_name.to_sym]
     rooms_capacity = {}
@@ -74,13 +77,15 @@ class Crawler
       capacity = tr.css('td')[1].text
       rooms_capacity[room] = Integer(capacity)
     end
+    @rooms_capacity[center_name] = rooms_capacity unless rooms_capacity.empty?
     rooms_capacity
   end
 
   # gets rooms name and key
   def rooms(center_name)
     @rooms = {} if @rooms.nil?
-    return @rooms[center_name] unless @rooms[center_name].nil?
+    return @rooms[center_name] unless @rooms[center_name].nil? or @rooms[center_name].empty?
+    puts 'GETTING ROOMS FROM SERVER'
     ensure_logged_in
     url = BASE_URL + RESERVATION_URL + CENTER_CODES[center_name.to_sym]
     center_rooms = {}
@@ -93,6 +98,10 @@ class Crawler
     center_rooms.delete ''
     @rooms[center_name] = center_rooms
     center_rooms
+  end
+
+  def room_name(center, room_number)
+    rooms(center)[room_number]
   end
 
   def agent
