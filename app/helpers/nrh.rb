@@ -42,7 +42,7 @@
 #       page = @crawler.agent.get URL_NRH + i.to_s
 #       page = page.search("//div[@class='content']").remove
 #       page.delete page.first
-    
+
 #       page.reverse_each do |edition|
 #         process_edition edition
 #       end
@@ -56,7 +56,6 @@
 #         end
 #       end
 #     end
-
 
 #     @file.puts "</body>\n</html>"
 #     @file.close

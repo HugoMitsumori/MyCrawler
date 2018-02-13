@@ -166,6 +166,12 @@ Performance/StringReplacement:
 Style/AndOr:
   Enabled: false
 
+Style/AsciiComments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, EnforcedStyle.

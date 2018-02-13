@@ -6,6 +6,7 @@ class ReservationsController < ApplicationController
 
   def new
     puts session[:user]
+    Crawler.instance.capacity 'INTERLAGOS'
     @rooms = CrawlerHelper::CCSUL_ROOMS
   end
 

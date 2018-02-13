@@ -5,9 +5,18 @@ class Crawler
   attr_accessor :code, :password
   attr_writer :agent
 
+  BASE_URL = 'https://extra2.bsgi.org.br'.freeze
+  CENTER_RESERVATION_URL = '/sedes_novo/reserva_sala/?id='.freeze
+  ROOMS_CAPACITY_URL = '/sedes_novo/salas/?id='.freeze
   URL_LOGIN = 'https://extra2.bsgi.org.br/login/'.freeze
   URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'.freeze
   URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'.freeze
+
+  CENTER_CODES = {
+    'CCSUL': '61',
+    'INTERLAGOS': '22'
+  }.freeze
+
   CAPACIDADE_CCSUL = {
     '334' => 20,
     '66' => 100,
@@ -51,7 +60,7 @@ class Crawler
   def ensure_logged_in
     if File.exist?('cookies.yml')
       agent.cookie_jar.load('cookies.yml')
-    else
+    elsif agent.nil?
       login(@code, @password)
     end
   end
@@ -74,6 +83,21 @@ class Crawler
     button = form.buttons.first
     puts 'APERTANDO BOTÃO' + button.inspect
     form.submit button
+  end
+
+  # gets rooms capacity for given center
+  def capacity(center_name)
+    ensure_logged_in
+    url = BASE_URL + ROOMS_CAPACITY_URL + CENTER_CODES[center_name.to_sym]
+    rooms_capacity = {}
+    page = agent.get url
+    page.css('tbody').css('tr').each_with_index do |tr, i|
+      next if i.odd?
+      room = tr.css('h6').text
+      capacity = tr.css('td')[1].text
+      rooms_capacity[room] = capacity
+    end
+    rooms_capacity
   end
 
   def agent

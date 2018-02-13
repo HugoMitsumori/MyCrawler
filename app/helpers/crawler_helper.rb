@@ -1,10 +1,5 @@
 # provides data and useful methods
 module CrawlerHelper
-  URL = 'https://extra2.bsgi.org.br'.freeze
-  URL_LOGIN = 'https://extra2.bsgi.org.br/login/'.freeze
-  URL_CCSUL = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=61#top'.freeze
-  URL_INTERLAGOS = 'https://extra2.bsgi.org.br/sedes_novo/reserva_sala/?id=22#top'.freeze
-
   CCSUL_ROOMS = {
     'BIBLIOTECA' => '334',
     'REDE DA AMIZADE' => '66',
@@ -27,63 +22,7 @@ module CrawlerHelper
     'SALA DE CONFERENCIA' => '92'
   }.freeze
 
-  CAPACIDADE_CCSUL = {
-    '334' => '20',
-    '66' => '100',
-    '67' => '60',
-    '68' => '40',
-    '69' => '10',
-    '70' => '50',
-    '71' => '100',
-    '72' => '30',
-    '73' => '30',
-    '75' => '10',
-    '76' => '10'
-  }.freeze
-
-  CAPACIDADE_INTERLAGOS = {
-    '90' => '150',
-    '88' => '250',
-    '89' => '50',
-    '91' => '25',
-    '92' => '20'
-  }.freeze
-
-  ALLOWED_CODES = ['84242'].freeze
-
-  def login(codigo, senha)
-    @agent = agent
-
-    page = @agent.get URL_LOGIN
-    form = page.forms.first
-
-    username_field = form.field_with(name: 'codigo')
-    username_field.value = codigo
-    password_field = form.field_with(name: 'senha')
-    password_field.value = senha
-
-    button = form.buttons.first
-    page = form.submit button
-    return @agent if page.title != '.:: BSGI Extranet ::.'
-    false
-  end
-
-  def reservar(sede, atividade, sala, data, inicio, fim, _previsao)
-    url_reserva = sede == 'CCSUL' ? URL_CCSUL : URL_INTERLAGOS
-    capacidade = sede == 'CCSUL' ? CAPACIDADE_CCSUL : CAPACIDADE_INTERLAGOS
-    page = @agent.get url_reserva
-    form = page.forms.first
-    form.field_with(name: 'data').value = data
-    form.field_with(name: 'atividade').value = atividade
-    form.field_with(name: 'organizacao').value = 'Núcleo Sul'
-    form.field_with(name: 'previsao').value = (Integer(capacidade[sala]) > 50 ? 50.to_s : capacidade[sala])
-    form.field_with(name: 'sala').value = sala
-    form.field_with(name: 'inicio').value = inicio
-    form.field_with(name: 'fim').value = fim
-    form.field_with(name: 'divisao').value = '13' # 13 = GH - ENSAIO
-    button = form.buttons.first
-    form.submit button
-  end
+  ALLOWED_CODES = %w[84242 165559 183366].freeze
 
   def extract_text(url)
     page = @agent.get url
