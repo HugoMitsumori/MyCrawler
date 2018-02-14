@@ -1,45 +1,50 @@
 %h1 Reserva de Salas
 
-.form-container
+.reservations-container
+  .form-container
 
-  #reservation-message
+    #reservation-message
 
-  = button_tag 'Ongakutai', type: 'button', id: 'fill-form'
+    = button_tag 'Ongakutai', type: 'button', id: 'fill-form'
 
-  = form_for :reservation, url: '/reservations', remote: true, html: {id: 'reservation-form'} do |f|
+    = form_for :reservation, url: '/reservations', remote: true, html: {id: 'reservation-form'} do |f|
 
-    .fields
+      .fields
 
-      = f.label 'Nome padrão da atividade:'
-      = f.text_field :name
+        = f.label 'Nome padrão da atividade:'
+        = f.text_field :name
 
-      = f.label 'Organização:'
-      = f.text_field :organization
+        = f.label 'Organização:'
+        = f.text_field :organization
 
-      = f.label 'Divisão (1 = 5D, 13 = GH):'
-      = f.text_field :division
+        = f.label 'Divisão (1 = 5D, 13 = GH):'
+        = f.text_field :division
 
-      = f.label 'Data (dd/mm/aaaa):'
-      = f.text_field :date
+        = f.label 'Data (dd/mm/aaaa):'
+        = f.text_field :date
 
-      = f.label 'Horário de início (hh:mm):'
-      = f.text_field :start_time
+        = f.label 'Horário de início (hh:mm):'
+        = f.text_field :start_time
 
-      = f.label 'Horário de término (hh:mm):'
-      = f.text_field :finish_time
+        = f.label 'Horário de término (hh:mm):'
+        = f.text_field :finish_time
 
-      = f.label 'Número previsto de membros:'
-      = f.text_field :members
+        = f.label 'Número previsto de membros:'
+        = f.text_field :members
 
-      = f.hidden_field :center, value: @center
+        = f.hidden_field :center, value: @center
 
-    .rooms
-      %h3 Salas a serem reservadas:
-      - @rooms.each do |number, room|
-        = f.label "rooms_#{number}" do
-          = f.check_box :rooms, { multiple: true }, number
-          = room
+      .rooms
+        %h3 Salas a serem reservadas:
+        - @rooms.each do |number, room|
+          = f.label "rooms_#{number}" do
+            = f.check_box :rooms, { multiple: true }, number
+            = room
 
-    = f.submit 'Reservar', id: 'reservation-submit'
+      = f.submit 'Reservar', id: 'reservation-submit'
 
-    = link_to 'Voltar', reservations_choose_path
+      = link_to 'Voltar', reservations_choose_path
+
+  .reservations
+    %h2 Salas reservadas no mês
+    = @page

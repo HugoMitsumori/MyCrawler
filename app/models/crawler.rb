@@ -104,6 +104,22 @@ class Crawler
     rooms(center)[room_number]
   end
 
+  def reservations_page(center)
+    ensure_logged_in
+    url = BASE_URL + "/sedes_novo/mapa_atividades/?id=#{CENTER_CODES[center.to_sym]}"
+    page = agent.get(url).css('div#myTabContent table')
+    page.css('td.detalhe').remove
+    page.css('td.aleft').remove
+    page.css('em').remove
+    page.xpath("//td[@class='bg_cinza atividade']").remove
+    page.xpath("//span[@class='label label-success']").remove
+    page.xpath('//tr[th]').remove
+    page.xpath("//th[not(@colspan='6')]").remove
+    page.xpath('//tr[not(thead) and not(td[nobr])]').remove
+    page.xpath("//td[@rowspan='2']").remove
+    page.to_s.gsub('  ', '').gsub(/[\n]+/, "\n").html_safe
+  end
+
   def agent
     @agent = new_agent if @agent.nil?
     @agent
