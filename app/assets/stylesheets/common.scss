@@ -124,21 +124,20 @@ a { margin-top: 20px; }
   max-width: 95vw;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 0 2px #777;
+  box-shadow: 0 0 5px #ddd;
   margin: 10px;
 
   h2 { text-align: center; }
 
   .table-menor { display: none; }
-
+  table { width: 100%; }
   thead { @include debug-border; }
   tbody {
     tr {
       height: 20px;
-      @include debug-border;
       display: flex;
       flex-wrap: wrap;
-
+      border-top: 1px solid #ddd;
       h6 { margin: 0 10px; line-height: 20px; font-size: 14px; }
       b { width: 100px; }
     }
