@@ -8,6 +8,7 @@ class ReservationsController < ApplicationController
     puts session[:user]
     @center = params[:center]
     @rooms = Crawler.instance.rooms(@center)
+    @page = Crawler.instance.reservations_page(@center)
   end
 
   def create

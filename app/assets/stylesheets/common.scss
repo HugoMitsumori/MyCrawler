@@ -19,6 +19,11 @@ h1 {
   margin: 20px;
 }
 
+.reservations-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .login { max-width: 350px; }
 
 .form-container {
@@ -115,8 +120,38 @@ input[type=submit], button, .link {
 
 a { margin-top: 20px; }
 
+.reservations {
+  max-width: 95vw;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #777;
+  margin: 10px;
+
+  h2 { text-align: center; }
+
+  .table-menor { display: none; }
+
+  thead { @include debug-border; }
+  tbody {
+    tr {
+      height: 20px;
+      @include debug-border;
+      display: flex;
+      flex-wrap: wrap;
+
+      h6 { margin: 0 10px; line-height: 20px; font-size: 14px; }
+      b { width: 100px; }
+    }
+  }
+}
+
 
 @media screen and (min-width: 768px) {
+
+  .reservations-container {
+    flex-direction: row;
+  }
+
   .form-container {
     width: 750px;
 
@@ -154,5 +189,9 @@ a { margin-top: 20px; }
 
   #reservation-message {
     order: 0;
+  }
+
+  .reservations {
+    width: 300px;
   }
 }
