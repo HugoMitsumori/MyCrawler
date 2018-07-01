@@ -1,0 +1,34 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:10-alpine
+    ports:
+      - "5432"
+  redis:
+    image: redis:alpine
+    command: redis-server
+    ports:
+      - "6379"
+  sidekiq:
+    image: hugords/dev:2.4.1-home
+    command: bundle exec sidekiq
+    volumes:
+      - .:/app
+      - ~/bundle/2.4.1:/bundle
+    env_file:
+      - '.env'
+    depends_on:
+      - redis
+  web:
+    image: hugords/dev:2.4.1-home
+    env_file:
+      - '.env'
+    command: bundle exec rails server -p 3000 -b 0.0.0.0
+    volumes:
+      - .:/app
+      - ~/bundle/2.4.1:/bundle
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - sidekiq

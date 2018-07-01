@@ -1,0 +1,7 @@
+:queues:
+  - prices
+:concurrency: 5
+:verbose: true
+development:
+  :pidfile: tmp/pids/sidekiq.pid
+  :logfile: log/sidekiq.log
