@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
   $('#login-form').on('submit', function() {
-    $('#session-message').append('Entrando. Aguarde...');
+    $('#session-message').text('Entrando. Aguarde...');
   });
 
   var reservationProcessingMessage = function() {
@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
   $('#fill-form').on('click', function() {
     $('#reservation_name').val('Ensaio do Taiyo Ongakutai');
     $('#reservation_organization').val('Núcleo Sul');
-    $('#reservation_division').val('13');
+    $('#reservation_division').val('GH - Ensaio');
     $('#reservation_members').val('50');
   });
 });

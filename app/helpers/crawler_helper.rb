@@ -22,6 +22,16 @@ module CrawlerHelper
     'SALA DE CONFERENCIA' => '92'
   }.freeze
 
+  CENTER_CODES = {
+    'CCSUL' => '61',
+    'INTERLAGOS' => '22'
+  }.freeze
+
+  MAX_FORWARD = {
+    'CCSUL' => 60,
+    'INTERLAGOS' => 30
+  }.freeze
+
   ALLOWED_CODES = %w[84242 165559 183366].freeze
 
   def extract_text(url)

@@ -1,34 +1,45 @@
 # reservations Controller
 class ReservationsController < ApplicationController
   include CrawlerHelper
+  before_action :verify_session
 
   def index; end
 
+  def choose
+    @centers = Crawler::CENTER_CODES.keys
+  end
+
   def new
-    puts session[:user]
-    @center = params[:center]
-    @rooms = Crawler.instance.rooms(@center)
-    @page = Crawler.instance.reservations_page(@center)
+    @place = params[:center]
+    @rooms = Crawler.instance.rooms(@place)
+    @page = Crawler.instance.reservations_page(@place)
   end
 
   def create
-    success_rooms = []
-    crawler = Crawler.instance
-    @reservation = Reservation.new(reservation_params)
-    @reservation.rooms.each do |room|
-      page = crawler.reserve(room, @reservation)
-      puts page.inspect
-      next if page.nil? or page.forms.first.field_with(name: 'data').value != ''
-      success_rooms << crawler.room_name(@reservation.center, room)
-      sleep 2
+    params = reservation_params
+    rooms = params[:rooms] - ['0']
+    base_reservation = Reservation.new(params.except(:rooms, :date, :start_time))
+    base_reservation.datetime = "#{params[:date]} #{params[:start_time]}"
+    base_reservation.token = User.new(session[:user]).encrypted
+    if (base_reservation.datetime.to_date - Date.today).to_i > CrawlerHelper::MAX_FORWARD[params[:place]]
+      base_reservation.status = 'Reserva Futura'
+    else
+      base_reservation.status = 'Processando Reserva'
     end
-    respond_to do |format|
-      format.js { render 'create', locals: { success: success_rooms } }
+    reservations = []
+    rooms.each do |room|
+      reservation = base_reservation.dup
+      reservation.room = CrawlerHelper::CCSUL_ROOMS.invert[room]
+      reservation.save
+      ReservationJob.perform_now(reservation) if reservation.status == 'Processando Reserva'
+      reservations << reservation
     end
+
+    redirect_to results_path, reservations: reservations
   end
 
-  def choose
-    @centers = Crawler::CENTER_CODES.keys
+  def results
+    @reservations = params[:reservations]
   end
 
   private
@@ -36,7 +47,11 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(
       :name, :date, :start_time, :finish_time,
-      :members, :organization, :division, :center, rooms: []
+      :members, :organization, :division, :place, rooms: []
     )
+  end
+
+  def verify_session
+    redirect_to root_path unless session[:user].present?
   end
 end

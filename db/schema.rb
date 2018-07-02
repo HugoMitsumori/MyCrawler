@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_07_01_155400) do
     t.integer "members"
     t.string "division"
     t.string "status"
+    t.string "token"
   end
 
 end

@@ -8,38 +8,28 @@ class Crawler
   BASE_URL = 'https://extra2.bsgi.org.br'.freeze
   RESERVATION_URL = '/sedes_novo/reserva_sala/?id='.freeze
   ROOMS_CAPACITY_URL = '/sedes_novo/salas/?id='.freeze
-  URL_LOGIN = 'https://extra2.bsgi.org.br/login/'.freeze
+  LOGIN_URL = 'https://extra2.bsgi.org.br/login/'.freeze
 
   CENTER_CODES = {
     'CCSUL': '61',
     'INTERLAGOS': '22'
   }.freeze
 
-  def login(code, password)
-    puts 'LOGGING IN'
-    page = agent.get URL_LOGIN
-    form = page.forms.first
-
-    username_field = form.field_with(name: 'codigo')
-    username_field.value = code
-    password_field = form.field_with(name: 'senha')
-    password_field.value = password
-    @code = code
-    @password = password
-
-    button = form.buttons.first
-    page = form.submit button
-    return false if page.title == '.:: BSGI Extranet ::.'
-    agent.cookie_jar.save('cookies.yml', session: true)
-    agent
+  def login(user_code, password)
+    return false unless CrawlerHelper::ALLOWED_CODES.include? user_code.to_s
+    agent.visit LOGIN_URL unless agent.current_url.include? 'login'
+    agent.fill_in 'id_codigo', with: user_code
+    agent.fill_in 'id_senha', with: password
+    agent.first('.login100-form-btn').trigger('click')
+    sleep 6
+    return false if agent.current_url.include? 'login'
+    send('agent=', agent)
+    true
   end
 
-  def ensure_logged_in
-    if File.exist?('cookies.yml')
-      agent.cookie_jar.load('cookies.yml')
-    elsif agent.nil?
-      login(@code, @password)
-    end
+  def ensure_logged_in(url)
+    agent.visit url
+    login(ENV['MASTER_CODE'], ENV['MASTER_PASSWORD']) unless agent.first('.login100-form').nil?
   end
 
   def reserve(room, reservation)
@@ -86,16 +76,14 @@ class Crawler
     @rooms = {} if @rooms.nil?
     return @rooms[center_name] unless @rooms[center_name].nil? or @rooms[center_name].empty?
     puts 'GETTING ROOMS FROM SERVER'
-    ensure_logged_in
-    url = BASE_URL + RESERVATION_URL + CENTER_CODES[center_name.to_sym]
+    ensure_logged_in(BASE_URL + RESERVATION_URL + CENTER_CODES[center_name.to_sym])
     center_rooms = {}
-    page = agent.get url
-    page.css('select#id_sala').css('option').each do |option|
-      room_number = option['value']
+    agent.find('#id_sala').all('option').each do |option|
+      next if option.value == ''
+      room_number = option.value
       room_name = option.text
       center_rooms[room_number] = room_name
     end
-    center_rooms.delete ''
     @rooms[center_name] = center_rooms
     center_rooms
   end
@@ -105,36 +93,33 @@ class Crawler
   end
 
   def reservations_page(center)
-    ensure_logged_in
-    url = BASE_URL + "/sedes_novo/mapa_atividades/?id=#{CENTER_CODES[center.to_sym]}"
-    page = agent.get(url).css('div#myTabContent table')
+    ensure_logged_in(BASE_URL + "/sedes_novo/mapa_atividades/?id=#{CENTER_CODES[center.to_sym]}")
+    page = Nokogiri.HTML(agent.first('#myTabContent .table-condensed')['outerHTML'])
     page.css('td.detalhe').remove
     page.css('td.aleft').remove
     page.css('em').remove
     page.xpath("//td[@class='bg_cinza atividade']").remove
     page.xpath("//span[@class='label label-success']").remove
-    page.xpath('//tr[th]').remove
+    # page.xpath('//tr[th]').remove
     page.xpath("//th[not(@colspan='6')]").remove
-    page.xpath('//tr[not(thead) and not(td[nobr])]').remove
+    # page.xpath('//tr[not(thead) and not(td[nobr])]').remove
     page.xpath("//td[@rowspan='2']").remove
     page.to_s.gsub('  ', '').gsub(/[\n]+/, "\n").html_safe
   end
 
   def agent
-    @agent = new_agent if @agent.nil?
-    @agent
+    @agent || new_agent
   end
 
   private
 
   def new_agent
-    agent = Mechanize.new
-    agent.follow_meta_refresh = true
-    agent.redirect_ok = true
-    agent.keep_alive = true
-    agent.open_timeout = 30
-    agent.read_timeout = 30
-    agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    agent
+    require 'capybara/poltergeist'
+    Capybara.register_driver :poltergeist do |app|
+      Capybara::Poltergeist::Driver.new(app, js_errors: false)
+    end
+    Capybara.javascript_driver = :poltergeist
+    Capybara.ignore_hidden_elements = false
+    @agent = Capybara::Session.new(:poltergeist)
   end
 end

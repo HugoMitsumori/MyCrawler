@@ -10,6 +10,7 @@ class CreateReservations < ActiveRecord::Migration[5.2]
       t.integer :members
       t.string :division
       t.string :status
+      t.string :token
     end
   end
 end
