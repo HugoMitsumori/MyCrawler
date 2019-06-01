@@ -114,12 +114,19 @@ class Crawler
   private
 
   def new_agent
-    require 'capybara/poltergeist'
-    Capybara.register_driver :poltergeist do |app|
-      Capybara::Poltergeist::Driver.new(app, js_errors: false)
+    user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36'
+    options = {
+      args: ['no-sandbox', 'headless', 'disable-gpu', 'window-size=1200,900', 'disable-dev-shm-usage',
+             "user-agent='#{user_agent}'"],
+    }
+    options[:binary] = '/usr/bin/chromium-browser' if Rails.env.development?
+    Capybara.register_driver :headless_chrome do |app|
+      capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(chromeOptions: options)
+      Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
     end
-    Capybara.javascript_driver = :poltergeist
+
+    Capybara.javascript_driver = :headless_chrome
     Capybara.ignore_hidden_elements = false
-    @agent = Capybara::Session.new(:poltergeist)
+    @agent = Capybara::Session.new(:headless_chrome)
   end
 end

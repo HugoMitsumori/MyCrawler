@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.1'
+ruby '2.4.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -45,10 +45,8 @@ gem 'highline'
 gem 'newrelic_rpm'
 
 gem 'capybara'
+gem 'capybara-selenium'
 gem 'selenium-webdriver'
-
-gem 'phantomjs'
-gem 'poltergeist'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

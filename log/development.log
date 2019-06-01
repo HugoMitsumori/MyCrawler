@@ -31010,3 +31010,195 @@ Completed 200 OK in 7944ms (Views: 233.5ms | ActiveRecord: 0.0ms)
   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
   [1m[36mReservation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 38]]
   [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.25.0.1 at 2019-06-01 18:50:21 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 376ms (Views: 368.2ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 18:50:27 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 500 Internal Server Error in 47ms
+
+
+  
+Cliver::Dependency::NotFound (Could not find an executable ["phantomjs"] on your path.):
+  
+app/models/crawler.rb:20:in `login'
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/" for 172.25.0.1 at 2019-06-01 18:52:45 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 20.6ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 18:52:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 500 Internal Server Error in 334ms
+
+
+  
+Selenium::WebDriver::Error::UnknownError (unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/lib/chromium/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=72.0.3626.121,platform=Linux 4.9.0-9-amd64 x86_64)):
+  
+app/models/crawler.rb:20:in `login'
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:00:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 200ms (Views: 193.8ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:00:45 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 500 Internal Server Error in 389ms
+
+
+  
+Selenium::WebDriver::Error::UnknownError (unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/lib/chromium/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=72.0.3626.121,platform=Linux 4.9.0-9-amd64 x86_64)):
+  
+app/models/crawler.rb:20:in `login'
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:15:44 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 284ms (Views: 280.2ms)
+
+
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:16:09 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 38ms (Views: 33.9ms)
+
+
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:16:10 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 16.7ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:16:18 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.5ms)
+Completed 200 OK in 10ms (Views: 3.6ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:16:25 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms)
+
+
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:16:36 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.9ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:16:41 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:17:27 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.1ms)
+Completed 200 OK in 6ms (Views: 2.7ms)
+
+
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:17:30 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:17:36 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (2.8ms)
+Completed 200 OK in 10ms (Views: 7.2ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:18:04 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.5ms)
+Completed 200 OK in 7ms (Views: 3.5ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:18:29 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "code"=>"84242", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  Rendering sessions/fail.js.haml
+  Rendered sessions/fail.js.haml (1.6ms)
+Completed 200 OK in 7ms (Views: 3.8ms)
+
+
+Started GET "/" for 172.25.0.1 at 2019-06-01 19:18:56 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 27.7ms)
+
+
+Started POST "/sessions" for 172.25.0.1 at 2019-06-01 19:19:00 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"code"=>"84242", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+Completed 500 Internal Server Error in 393ms
+
+
+  
+Selenium::WebDriver::Error::UnknownError (unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/lib/chromium/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+  (Driver info: chromedriver=72.0.3626.121,platform=Linux 4.9.0-9-amd64 x86_64)):
+  
+app/models/crawler.rb:20:in `login'
+app/controllers/sessions_controller.rb:9:in `create'
