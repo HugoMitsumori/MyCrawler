@@ -44,9 +44,9 @@ gem 'haml'
 gem 'highline'
 gem 'newrelic_rpm'
 
-gem 'capybara'
+gem 'capybara', '>= 2.15'
 gem 'capybara-selenium'
-gem 'selenium-webdriver'
+gem 'selenium-webdriver', '3.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -20,7 +20,7 @@ class Crawler
     agent.visit LOGIN_URL unless agent.current_url.include? 'login'
     agent.fill_in 'id_codigo', with: user_code
     agent.fill_in 'id_senha', with: password
-    agent.first('.login100-form-btn').trigger('click')
+    agent.first('.login100-form-btn').click
     sleep 6
     return false if agent.current_url.include? 'login'
     send('agent=', agent)
