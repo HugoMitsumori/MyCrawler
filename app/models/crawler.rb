@@ -25,6 +25,9 @@ class Crawler
     return false if agent.current_url.include? 'login'
     send('agent=', agent)
     true
+  rescue Net::ReadTimeout
+    puts "Timeout!"
+    retry
   end
 
   def ensure_logged_in(url)
